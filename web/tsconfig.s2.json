@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "incremental": false
+  },
+  "include": [
+    "types/next-shim.d.ts", "lib/*.ts", "lib/db/**/*.ts", "components/*.tsx", "components/ui/**/*.tsx", "components/layout/**/*.tsx",
+    "app/boletim/**/*.ts", "app/boletim/**/*.tsx", "app/api/boletim/**/*.ts", "lib/boletim/**/*.ts", "components/boletim/**/*.ts", "components/boletim/**/*.tsx", "app/cadastros/**/*.ts", "app/cadastros/**/*.tsx", "app/api/cadastros/**/*.ts", "lib/cadastros/**/*.ts", "components/cadastros/**/*.ts", "components/cadastros/**/*.tsx", "app/dia/**/*.ts", "app/dia/**/*.tsx", "app/api/dia/**/*.ts", "lib/dia/**/*.ts", "components/dia/**/*.ts", "components/dia/**/*.tsx", "app/usuarios/**/*.ts", "app/usuarios/**/*.tsx", "app/api/usuarios/**/*.ts", "lib/usuarios/**/*.ts", "components/usuarios/**/*.ts", "components/usuarios/**/*.tsx"
+  ],
+  "exclude": ["node_modules", "data"]
+}

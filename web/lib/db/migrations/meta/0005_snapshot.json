@@ -1,0 +1,4520 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "e9f887bb-1fde-4a9a-8c53-48dd6e45239a",
+  "prevId": "5c024478-4a88-424a-a8c3-9fdc67f9561e",
+  "tables": {
+    "agendamento": {
+      "name": "agendamento",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "compra_id": {
+          "name": "compra_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "fornecedor_id": {
+          "name": "fornecedor_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "data": {
+          "name": "data",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "horario": {
+          "name": "horario",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "placa": {
+          "name": "placa",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "transportadora": {
+          "name": "transportadora",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "motorista": {
+          "name": "motorista",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "acondicionamento_ocupacao": {
+          "name": "acondicionamento_ocupacao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "peso_declarado_kg": {
+          "name": "peso_declarado_kg",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "peso_balanca_kg": {
+          "name": "peso_balanca_kg",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'agendado'"
+        },
+        "agendado_na_hora": {
+          "name": "agendado_na_hora",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": false
+        },
+        "validacao_status": {
+          "name": "validacao_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'aguardando'"
+        },
+        "validacao_obs": {
+          "name": "validacao_obs",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "validado_por": {
+          "name": "validado_por",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "validado_em": {
+          "name": "validado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "autorizado_por": {
+          "name": "autorizado_por",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "autorizado_em": {
+          "name": "autorizado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "chegada_em": {
+          "name": "chegada_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "liberacao_em": {
+          "name": "liberacao_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "prioridade": {
+          "name": "prioridade",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": false
+        },
+        "excecao_ocupacao": {
+          "name": "excecao_ocupacao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "excecao_motivo": {
+          "name": "excecao_motivo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "aprovacao": {
+          "name": "aprovacao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'aprovado'"
+        },
+        "recusa_comentario": {
+          "name": "recusa_comentario",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "aprovacao_por": {
+          "name": "aprovacao_por",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "aprovacao_em": {
+          "name": "aprovacao_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "criado_por_usuario_id": {
+          "name": "criado_por_usuario_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "remarcacoes": {
+          "name": "remarcacoes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "motivo_cancelamento": {
+          "name": "motivo_cancelamento",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "cancelado_por": {
+          "name": "cancelado_por",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "cancelado_em": {
+          "name": "cancelado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "chapas_previstas": {
+          "name": "chapas_previstas",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "empilhadeira_prevista": {
+          "name": "empilhadeira_prevista",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "duracao_prevista_min": {
+          "name": "duracao_prevista_min",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "observacao": {
+          "name": "observacao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "extra": {
+          "name": "extra",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "origem": {
+          "name": "origem",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "criado_em": {
+          "name": "criado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "atualizado_em": {
+          "name": "atualizado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "agendamento_data_horario_ix": {
+          "name": "agendamento_data_horario_ix",
+          "columns": [
+            "data",
+            "horario"
+          ],
+          "isUnique": false
+        },
+        "agendamento_status_ix": {
+          "name": "agendamento_status_ix",
+          "columns": [
+            "status"
+          ],
+          "isUnique": false
+        },
+        "agendamento_compra_ix": {
+          "name": "agendamento_compra_ix",
+          "columns": [
+            "compra_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "agendamento_compra_id_compra_id_fk": {
+          "name": "agendamento_compra_id_compra_id_fk",
+          "tableFrom": "agendamento",
+          "tableTo": "compra",
+          "columnsFrom": [
+            "compra_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "agendamento_fornecedor_id_fornecedor_id_fk": {
+          "name": "agendamento_fornecedor_id_fornecedor_id_fk",
+          "tableFrom": "agendamento",
+          "tableTo": "fornecedor",
+          "columnsFrom": [
+            "fornecedor_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "agendamento_aprovacao_por_usuario_id_fk": {
+          "name": "agendamento_aprovacao_por_usuario_id_fk",
+          "tableFrom": "agendamento",
+          "tableTo": "usuario",
+          "columnsFrom": [
+            "aprovacao_por"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "agendamento_criado_por_usuario_id_usuario_id_fk": {
+          "name": "agendamento_criado_por_usuario_id_usuario_id_fk",
+          "tableFrom": "agendamento",
+          "tableTo": "usuario",
+          "columnsFrom": [
+            "criado_por_usuario_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "agendamento_status_ck": {
+          "name": "agendamento_status_ck",
+          "value": "\"status\" IN ('agendado', 'chegou', 'em_descarga', 'concluido', 'cancelado', 'nao_recebido')"
+        },
+        "agendamento_acond_ocupacao_ck": {
+          "name": "agendamento_acond_ocupacao_ck",
+          "value": "\"acondicionamento_ocupacao\" IN ('batido', 'unitizado')"
+        },
+        "agendamento_validacao_status_ck": {
+          "name": "agendamento_validacao_status_ck",
+          "value": "\"validacao_status\" IN ('aguardando', 'conforme', 'divergente')"
+        },
+        "agendamento_origem_ck": {
+          "name": "agendamento_origem_ck",
+          "value": "\"origem\" IN ('historico', 'teste', 'operacao')"
+        }
+      }
+    },
+    "agendamento_armazem": {
+      "name": "agendamento_armazem",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "agendamento_id": {
+          "name": "agendamento_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "armazem_id": {
+          "name": "armazem_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "ordem": {
+          "name": "ordem",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "entrada_em": {
+          "name": "entrada_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "saida_em": {
+          "name": "saida_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "chapas_qtd": {
+          "name": "chapas_qtd",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "peso_kg": {
+          "name": "peso_kg",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "responsavel": {
+          "name": "responsavel",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "observacao": {
+          "name": "observacao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "agendamento_armazem_uk": {
+          "name": "agendamento_armazem_uk",
+          "columns": [
+            "agendamento_id",
+            "armazem_id"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "agendamento_armazem_agendamento_id_agendamento_id_fk": {
+          "name": "agendamento_armazem_agendamento_id_agendamento_id_fk",
+          "tableFrom": "agendamento_armazem",
+          "tableTo": "agendamento",
+          "columnsFrom": [
+            "agendamento_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "agendamento_armazem_armazem_id_armazem_id_fk": {
+          "name": "agendamento_armazem_armazem_id_armazem_id_fk",
+          "tableFrom": "agendamento_armazem",
+          "tableTo": "armazem",
+          "columnsFrom": [
+            "armazem_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "agendamento_nf": {
+      "name": "agendamento_nf",
+      "columns": {
+        "agendamento_id": {
+          "name": "agendamento_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "nota_fiscal_id": {
+          "name": "nota_fiscal_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "acondicionamento": {
+          "name": "acondicionamento",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "agendamento_nf_nf_ix": {
+          "name": "agendamento_nf_nf_ix",
+          "columns": [
+            "nota_fiscal_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "agendamento_nf_agendamento_id_agendamento_id_fk": {
+          "name": "agendamento_nf_agendamento_id_agendamento_id_fk",
+          "tableFrom": "agendamento_nf",
+          "tableTo": "agendamento",
+          "columnsFrom": [
+            "agendamento_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "agendamento_nf_nota_fiscal_id_nota_fiscal_id_fk": {
+          "name": "agendamento_nf_nota_fiscal_id_nota_fiscal_id_fk",
+          "tableFrom": "agendamento_nf",
+          "tableTo": "nota_fiscal",
+          "columnsFrom": [
+            "nota_fiscal_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "agendamento_nf_agendamento_id_nota_fiscal_id_pk": {
+          "columns": [
+            "agendamento_id",
+            "nota_fiscal_id"
+          ],
+          "name": "agendamento_nf_agendamento_id_nota_fiscal_id_pk"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "agendamento_nf_acondicionamento_ck": {
+          "name": "agendamento_nf_acondicionamento_ck",
+          "value": "\"acondicionamento\" IN ('batido', 'paletizado', 'big_bag')"
+        }
+      }
+    },
+    "armazem": {
+      "name": "armazem",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "nome": {
+          "name": "nome",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "local_fisico": {
+          "name": "local_fisico",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "faz_boletim": {
+          "name": "faz_boletim",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": true
+        },
+        "recebe_descarga": {
+          "name": "recebe_descarga",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": true
+        },
+        "ativo": {
+          "name": "ativo",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": true
+        },
+        "ordem": {
+          "name": "ordem",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        }
+      },
+      "indexes": {
+        "armazem_nome_uk": {
+          "name": "armazem_nome_uk",
+          "columns": [
+            "nome"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "aviso": {
+      "name": "aviso",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "agendamento_id": {
+          "name": "agendamento_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "armazem_id": {
+          "name": "armazem_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "destinatario": {
+          "name": "destinatario",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "tipo": {
+          "name": "tipo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "mensagem": {
+          "name": "mensagem",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "detalhe": {
+          "name": "detalhe",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "data_referencia": {
+          "name": "data_referencia",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "criado_em": {
+          "name": "criado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "lido_em": {
+          "name": "lido_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "aviso_agendamento_ix": {
+          "name": "aviso_agendamento_ix",
+          "columns": [
+            "agendamento_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "aviso_agendamento_id_agendamento_id_fk": {
+          "name": "aviso_agendamento_id_agendamento_id_fk",
+          "tableFrom": "aviso",
+          "tableTo": "agendamento",
+          "columnsFrom": [
+            "agendamento_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "aviso_armazem_id_armazem_id_fk": {
+          "name": "aviso_armazem_id_armazem_id_fk",
+          "tableFrom": "aviso",
+          "tableTo": "armazem",
+          "columnsFrom": [
+            "armazem_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "boletim": {
+      "name": "boletim",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "armazem_id": {
+          "name": "armazem_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "data": {
+          "name": "data",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'rascunho'"
+        },
+        "producao_total": {
+          "name": "producao_total",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "diarias_equivalentes": {
+          "name": "diarias_equivalentes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "valor_por_diaria": {
+          "name": "valor_por_diaria",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "total_a_pagar": {
+          "name": "total_a_pagar",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "complemento": {
+          "name": "complemento",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "piso_usado": {
+          "name": "piso_usado",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "fator_meia_usado": {
+          "name": "fator_meia_usado",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "responsavel": {
+          "name": "responsavel",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "observacao": {
+          "name": "observacao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "origem": {
+          "name": "origem",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "criado_em": {
+          "name": "criado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "atualizado_em": {
+          "name": "atualizado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "fechado_em": {
+          "name": "fechado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "boletim_armazem_data_uk": {
+          "name": "boletim_armazem_data_uk",
+          "columns": [
+            "armazem_id",
+            "data"
+          ],
+          "isUnique": true
+        },
+        "boletim_data_ix": {
+          "name": "boletim_data_ix",
+          "columns": [
+            "data"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "boletim_armazem_id_armazem_id_fk": {
+          "name": "boletim_armazem_id_armazem_id_fk",
+          "tableFrom": "boletim",
+          "tableTo": "armazem",
+          "columnsFrom": [
+            "armazem_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "boletim_status_ck": {
+          "name": "boletim_status_ck",
+          "value": "\"status\" IN ('rascunho', 'fechado')"
+        },
+        "boletim_origem_ck": {
+          "name": "boletim_origem_ck",
+          "value": "\"origem\" IN ('historico', 'teste', 'operacao')"
+        }
+      }
+    },
+    "boletim_chapa": {
+      "name": "boletim_chapa",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "boletim_id": {
+          "name": "boletim_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "chapa_id": {
+          "name": "chapa_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "data": {
+          "name": "data",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "tipo_diaria": {
+          "name": "tipo_diaria",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'completa'"
+        }
+      },
+      "indexes": {
+        "boletim_chapa_chapa_data_uk": {
+          "name": "boletim_chapa_chapa_data_uk",
+          "columns": [
+            "chapa_id",
+            "data"
+          ],
+          "isUnique": true
+        },
+        "boletim_chapa_boletim_ix": {
+          "name": "boletim_chapa_boletim_ix",
+          "columns": [
+            "boletim_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "boletim_chapa_boletim_id_boletim_id_fk": {
+          "name": "boletim_chapa_boletim_id_boletim_id_fk",
+          "tableFrom": "boletim_chapa",
+          "tableTo": "boletim",
+          "columnsFrom": [
+            "boletim_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "boletim_chapa_chapa_id_chapa_id_fk": {
+          "name": "boletim_chapa_chapa_id_chapa_id_fk",
+          "tableFrom": "boletim_chapa",
+          "tableTo": "chapa",
+          "columnsFrom": [
+            "chapa_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "boletim_chapa_tipo_diaria_ck": {
+          "name": "boletim_chapa_tipo_diaria_ck",
+          "value": "\"tipo_diaria\" IN ('completa', 'meia')"
+        }
+      }
+    },
+    "boletim_linha": {
+      "name": "boletim_linha",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "boletim_id": {
+          "name": "boletim_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "tipo_item_id": {
+          "name": "tipo_item_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "qtd_descarga": {
+          "name": "qtd_descarga",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'0'"
+        },
+        "qtd_remocao": {
+          "name": "qtd_remocao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'0'"
+        },
+        "qtd_transferencia": {
+          "name": "qtd_transferencia",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'0'"
+        },
+        "quantidade_total": {
+          "name": "quantidade_total",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "preco_usado": {
+          "name": "preco_usado",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "valor": {
+          "name": "valor",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "boletim_linha_uk": {
+          "name": "boletim_linha_uk",
+          "columns": [
+            "boletim_id",
+            "tipo_item_id"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "boletim_linha_boletim_id_boletim_id_fk": {
+          "name": "boletim_linha_boletim_id_boletim_id_fk",
+          "tableFrom": "boletim_linha",
+          "tableTo": "boletim",
+          "columnsFrom": [
+            "boletim_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "boletim_linha_tipo_item_id_tipo_item_id_fk": {
+          "name": "boletim_linha_tipo_item_id_tipo_item_id_fk",
+          "tableFrom": "boletim_linha",
+          "tableTo": "tipo_item",
+          "columnsFrom": [
+            "tipo_item_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "chapa": {
+      "name": "chapa",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "matricula": {
+          "name": "matricula",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "nome": {
+          "name": "nome",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "armazem_id": {
+          "name": "armazem_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ativo": {
+          "name": "ativo",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": true
+        }
+      },
+      "indexes": {
+        "chapa_matricula_uk": {
+          "name": "chapa_matricula_uk",
+          "columns": [
+            "matricula"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "chapa_armazem_id_armazem_id_fk": {
+          "name": "chapa_armazem_id_armazem_id_fk",
+          "tableFrom": "chapa",
+          "tableTo": "armazem",
+          "columnsFrom": [
+            "armazem_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "compra": {
+      "name": "compra",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "fornecedor_id": {
+          "name": "fornecedor_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "numero_pedido": {
+          "name": "numero_pedido",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "descricao": {
+          "name": "descricao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "token": {
+          "name": "token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'criada'"
+        },
+        "criada_por": {
+          "name": "criada_por",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "criada_em": {
+          "name": "criada_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "preenchida_em": {
+          "name": "preenchida_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "origem": {
+          "name": "origem",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "compra_token_uk": {
+          "name": "compra_token_uk",
+          "columns": [
+            "token"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "compra_fornecedor_id_fornecedor_id_fk": {
+          "name": "compra_fornecedor_id_fornecedor_id_fk",
+          "tableFrom": "compra",
+          "tableTo": "fornecedor",
+          "columnsFrom": [
+            "fornecedor_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "compra_status_ck": {
+          "name": "compra_status_ck",
+          "value": "\"status\" IN ('criada', 'confirmada', 'cancelada')"
+        },
+        "compra_origem_ck": {
+          "name": "compra_origem_ck",
+          "value": "\"origem\" IN ('historico', 'teste', 'operacao')"
+        }
+      }
+    },
+    "compra_item": {
+      "name": "compra_item",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "compra_id": {
+          "name": "compra_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "produto_id": {
+          "name": "produto_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "descricao": {
+          "name": "descricao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "quantidade": {
+          "name": "quantidade",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "unidade": {
+          "name": "unidade",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "peso_kg": {
+          "name": "peso_kg",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "compra_item_compra_ix": {
+          "name": "compra_item_compra_ix",
+          "columns": [
+            "compra_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "compra_item_compra_id_compra_id_fk": {
+          "name": "compra_item_compra_id_compra_id_fk",
+          "tableFrom": "compra_item",
+          "tableTo": "compra",
+          "columnsFrom": [
+            "compra_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "compra_item_produto_id_produto_id_fk": {
+          "name": "compra_item_produto_id_produto_id_fk",
+          "tableFrom": "compra_item",
+          "tableTo": "produto",
+          "columnsFrom": [
+            "produto_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "convite_fornecedor": {
+      "name": "convite_fornecedor",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "token": {
+          "name": "token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "criado_por": {
+          "name": "criado_por",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "criado_em": {
+          "name": "criado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "usado_em": {
+          "name": "usado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "convite_fornecedor_token_uk": {
+          "name": "convite_fornecedor_token_uk",
+          "columns": [
+            "token"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "convite_fornecedor_criado_por_usuario_id_fk": {
+          "name": "convite_fornecedor_criado_por_usuario_id_fk",
+          "tableFrom": "convite_fornecedor",
+          "tableTo": "usuario",
+          "columnsFrom": [
+            "criado_por"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "deposito_armazem": {
+      "name": "deposito_armazem",
+      "columns": {
+        "deposito": {
+          "name": "deposito",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "armazem_id": {
+          "name": "armazem_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "recebe_direto": {
+          "name": "recebe_direto",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "deposito_armazem_armazem_id_armazem_id_fk": {
+          "name": "deposito_armazem_armazem_id_armazem_id_fk",
+          "tableFrom": "deposito_armazem",
+          "tableTo": "armazem",
+          "columnsFrom": [
+            "armazem_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "descarga_chapa": {
+      "name": "descarga_chapa",
+      "columns": {
+        "agendamento_armazem_id": {
+          "name": "agendamento_armazem_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "chapa_id": {
+          "name": "chapa_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "descarga_chapa_agendamento_armazem_id_agendamento_armazem_id_fk": {
+          "name": "descarga_chapa_agendamento_armazem_id_agendamento_armazem_id_fk",
+          "tableFrom": "descarga_chapa",
+          "tableTo": "agendamento_armazem",
+          "columnsFrom": [
+            "agendamento_armazem_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "descarga_chapa_chapa_id_chapa_id_fk": {
+          "name": "descarga_chapa_chapa_id_chapa_id_fk",
+          "tableFrom": "descarga_chapa",
+          "tableTo": "chapa",
+          "columnsFrom": [
+            "chapa_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "descarga_chapa_agendamento_armazem_id_chapa_id_pk": {
+          "columns": [
+            "agendamento_armazem_id",
+            "chapa_id"
+          ],
+          "name": "descarga_chapa_agendamento_armazem_id_chapa_id_pk"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "descarga_equipamento": {
+      "name": "descarga_equipamento",
+      "columns": {
+        "agendamento_armazem_id": {
+          "name": "agendamento_armazem_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "equipamento_id": {
+          "name": "equipamento_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "descarga_equipamento_agendamento_armazem_id_agendamento_armazem_id_fk": {
+          "name": "descarga_equipamento_agendamento_armazem_id_agendamento_armazem_id_fk",
+          "tableFrom": "descarga_equipamento",
+          "tableTo": "agendamento_armazem",
+          "columnsFrom": [
+            "agendamento_armazem_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "descarga_equipamento_equipamento_id_equipamento_id_fk": {
+          "name": "descarga_equipamento_equipamento_id_equipamento_id_fk",
+          "tableFrom": "descarga_equipamento",
+          "tableTo": "equipamento",
+          "columnsFrom": [
+            "equipamento_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "descarga_equipamento_agendamento_armazem_id_equipamento_id_pk": {
+          "columns": [
+            "agendamento_armazem_id",
+            "equipamento_id"
+          ],
+          "name": "descarga_equipamento_agendamento_armazem_id_equipamento_id_pk"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "equipamento": {
+      "name": "equipamento",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "armazem_id": {
+          "name": "armazem_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "nome": {
+          "name": "nome",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "finalidade": {
+          "name": "finalidade",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "quantidade": {
+          "name": "quantidade",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 1
+        },
+        "disponivel": {
+          "name": "disponivel",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 1
+        },
+        "indisponivel_motivo": {
+          "name": "indisponivel_motivo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'operacional'"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "equipamento_armazem_id_armazem_id_fk": {
+          "name": "equipamento_armazem_id_armazem_id_fk",
+          "tableFrom": "equipamento",
+          "tableTo": "armazem",
+          "columnsFrom": [
+            "armazem_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "equipe": {
+      "name": "equipe",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "data": {
+          "name": "data",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "nome": {
+          "name": "nome",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "armazem_id": {
+          "name": "armazem_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "tarefa": {
+          "name": "tarefa",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "horario_inicio": {
+          "name": "horario_inicio",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "horario_fim": {
+          "name": "horario_fim",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ordem": {
+          "name": "ordem",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "criado_em": {
+          "name": "criado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "origem": {
+          "name": "origem",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "equipe_data_nome_uk": {
+          "name": "equipe_data_nome_uk",
+          "columns": [
+            "data",
+            "nome"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "equipe_armazem_id_armazem_id_fk": {
+          "name": "equipe_armazem_id_armazem_id_fk",
+          "tableFrom": "equipe",
+          "tableTo": "armazem",
+          "columnsFrom": [
+            "armazem_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "equipe_origem_ck": {
+          "name": "equipe_origem_ck",
+          "value": "\"origem\" IN ('historico', 'teste', 'operacao')"
+        }
+      }
+    },
+    "equipe_chapa": {
+      "name": "equipe_chapa",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "equipe_id": {
+          "name": "equipe_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "chapa_id": {
+          "name": "chapa_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "data": {
+          "name": "data",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "ordem": {
+          "name": "ordem",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "tipo_diaria": {
+          "name": "tipo_diaria",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'completa'"
+        }
+      },
+      "indexes": {
+        "equipe_chapa_chapa_data_uk": {
+          "name": "equipe_chapa_chapa_data_uk",
+          "columns": [
+            "chapa_id",
+            "data"
+          ],
+          "isUnique": true
+        },
+        "equipe_chapa_equipe_ix": {
+          "name": "equipe_chapa_equipe_ix",
+          "columns": [
+            "equipe_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "equipe_chapa_equipe_id_equipe_id_fk": {
+          "name": "equipe_chapa_equipe_id_equipe_id_fk",
+          "tableFrom": "equipe_chapa",
+          "tableTo": "equipe",
+          "columnsFrom": [
+            "equipe_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "equipe_chapa_chapa_id_chapa_id_fk": {
+          "name": "equipe_chapa_chapa_id_chapa_id_fk",
+          "tableFrom": "equipe_chapa",
+          "tableTo": "chapa",
+          "columnsFrom": [
+            "chapa_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "equipe_chapa_tipo_diaria_ck": {
+          "name": "equipe_chapa_tipo_diaria_ck",
+          "value": "\"tipo_diaria\" IN ('completa', 'meia')"
+        }
+      }
+    },
+    "evento": {
+      "name": "evento",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "agendamento_id": {
+          "name": "agendamento_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "tipo": {
+          "name": "tipo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "detalhe": {
+          "name": "detalhe",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "autor": {
+          "name": "autor",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "criado_em": {
+          "name": "criado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "evento_agendamento_ix": {
+          "name": "evento_agendamento_ix",
+          "columns": [
+            "agendamento_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "evento_agendamento_id_agendamento_id_fk": {
+          "name": "evento_agendamento_id_agendamento_id_fk",
+          "tableFrom": "evento",
+          "tableTo": "agendamento",
+          "columnsFrom": [
+            "agendamento_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "feriado": {
+      "name": "feriado",
+      "columns": {
+        "data": {
+          "name": "data",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "nome": {
+          "name": "nome",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "fornecedor": {
+      "name": "fornecedor",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "codigo": {
+          "name": "codigo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "razao_social": {
+          "name": "razao_social",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "cnpj": {
+          "name": "cnpj",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "origem": {
+          "name": "origem",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "fornecedor_codigo_uk": {
+          "name": "fornecedor_codigo_uk",
+          "columns": [
+            "codigo"
+          ],
+          "isUnique": true
+        },
+        "fornecedor_cnpj_ix": {
+          "name": "fornecedor_cnpj_ix",
+          "columns": [
+            "cnpj"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "fornecedor_origem_ck": {
+          "name": "fornecedor_origem_ck",
+          "value": "\"origem\" IN ('historico', 'teste', 'operacao')"
+        }
+      }
+    },
+    "fornecedor_cadastro": {
+      "name": "fornecedor_cadastro",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "usuario_id": {
+          "name": "usuario_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "fornecedor_id": {
+          "name": "fornecedor_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "razao_social": {
+          "name": "razao_social",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "nome_fantasia": {
+          "name": "nome_fantasia",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "cnpj": {
+          "name": "cnpj",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "inscricao_estadual": {
+          "name": "inscricao_estadual",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "telefone": {
+          "name": "telefone",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "responsavel": {
+          "name": "responsavel",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "endereco": {
+          "name": "endereco",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "tipos_mercadoria": {
+          "name": "tipos_mercadoria",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'pendente'"
+        },
+        "alteracao_pendente": {
+          "name": "alteracao_pendente",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "motivo_recusa": {
+          "name": "motivo_recusa",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "decidido_por": {
+          "name": "decidido_por",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "decidido_em": {
+          "name": "decidido_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "criado_em": {
+          "name": "criado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "fornecedor_cadastro_usuario_uk": {
+          "name": "fornecedor_cadastro_usuario_uk",
+          "columns": [
+            "usuario_id"
+          ],
+          "isUnique": true
+        },
+        "fornecedor_cadastro_cnpj_uk": {
+          "name": "fornecedor_cadastro_cnpj_uk",
+          "columns": [
+            "cnpj"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "fornecedor_cadastro_usuario_id_usuario_id_fk": {
+          "name": "fornecedor_cadastro_usuario_id_usuario_id_fk",
+          "tableFrom": "fornecedor_cadastro",
+          "tableTo": "usuario",
+          "columnsFrom": [
+            "usuario_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "fornecedor_cadastro_fornecedor_id_fornecedor_id_fk": {
+          "name": "fornecedor_cadastro_fornecedor_id_fornecedor_id_fk",
+          "tableFrom": "fornecedor_cadastro",
+          "tableTo": "fornecedor",
+          "columnsFrom": [
+            "fornecedor_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "fornecedor_cadastro_decidido_por_usuario_id_fk": {
+          "name": "fornecedor_cadastro_decidido_por_usuario_id_fk",
+          "tableFrom": "fornecedor_cadastro",
+          "tableTo": "usuario",
+          "columnsFrom": [
+            "decidido_por"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "fornecedor_cadastro_status_ck": {
+          "name": "fornecedor_cadastro_status_ck",
+          "value": "\"status\" IN ('pendente', 'aprovado', 'recusado')"
+        }
+      }
+    },
+    "grupo_produto": {
+      "name": "grupo_produto",
+      "columns": {
+        "grupo": {
+          "name": "grupo",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "descricao": {
+          "name": "descricao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "armazem_id": {
+          "name": "armazem_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "tipo_item_id": {
+          "name": "tipo_item_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "conversao_producao": {
+          "name": "conversao_producao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "grupo_produto_armazem_id_armazem_id_fk": {
+          "name": "grupo_produto_armazem_id_armazem_id_fk",
+          "tableFrom": "grupo_produto",
+          "tableTo": "armazem",
+          "columnsFrom": [
+            "armazem_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "grupo_produto_tipo_item_id_tipo_item_id_fk": {
+          "name": "grupo_produto_tipo_item_id_tipo_item_id_fk",
+          "tableFrom": "grupo_produto",
+          "tableTo": "tipo_item",
+          "columnsFrom": [
+            "tipo_item_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "hist_carga": {
+      "name": "hist_carga",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "cod_pn": {
+          "name": "cod_pn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "data": {
+          "name": "data",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "notas_qtd": {
+          "name": "notas_qtd",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "itens_qtd": {
+          "name": "itens_qtd",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "peso_total_kg": {
+          "name": "peso_total_kg",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "especie_xml": {
+          "name": "especie_xml",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "acondicionamento_xml": {
+          "name": "acondicionamento_xml",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "hist_carga_data_ix": {
+          "name": "hist_carga_data_ix",
+          "columns": [
+            "data"
+          ],
+          "isUnique": false
+        },
+        "hist_carga_pn_data_ix": {
+          "name": "hist_carga_pn_data_ix",
+          "columns": [
+            "cod_pn",
+            "data"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "hist_carga_armazem": {
+      "name": "hist_carga_armazem",
+      "columns": {
+        "hist_carga_id": {
+          "name": "hist_carga_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "armazem_id": {
+          "name": "armazem_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "itens_qtd": {
+          "name": "itens_qtd",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "peso_kg": {
+          "name": "peso_kg",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "quantidade_boletim": {
+          "name": "quantidade_boletim",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "producao_estimada": {
+          "name": "producao_estimada",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "hist_carga_armazem_armazem_ix": {
+          "name": "hist_carga_armazem_armazem_ix",
+          "columns": [
+            "armazem_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "hist_carga_armazem_hist_carga_id_hist_carga_id_fk": {
+          "name": "hist_carga_armazem_hist_carga_id_hist_carga_id_fk",
+          "tableFrom": "hist_carga_armazem",
+          "tableTo": "hist_carga",
+          "columnsFrom": [
+            "hist_carga_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "hist_carga_armazem_armazem_id_armazem_id_fk": {
+          "name": "hist_carga_armazem_armazem_id_armazem_id_fk",
+          "tableFrom": "hist_carga_armazem",
+          "tableTo": "armazem",
+          "columnsFrom": [
+            "armazem_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "hist_carga_armazem_hist_carga_id_armazem_id_pk": {
+          "columns": [
+            "hist_carga_id",
+            "armazem_id"
+          ],
+          "name": "hist_carga_armazem_hist_carga_id_armazem_id_pk"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "hist_chapas_dia": {
+      "name": "hist_chapas_dia",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "data": {
+          "name": "data",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "dia_semana": {
+          "name": "dia_semana",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "presentes": {
+          "name": "presentes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "cafe": {
+          "name": "cafe",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "valor_pago": {
+          "name": "valor_pago",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "qualidade": {
+          "name": "qualidade",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "considerada": {
+          "name": "considerada",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": true
+        }
+      },
+      "indexes": {
+        "hist_chapas_dia_data_ix": {
+          "name": "hist_chapas_dia_data_ix",
+          "columns": [
+            "data"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "hist_importacao_log": {
+      "name": "hist_importacao_log",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "arquivo": {
+          "name": "arquivo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "linhas_lidas": {
+          "name": "linhas_lidas",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "linhas_ok": {
+          "name": "linhas_ok",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "linhas_marcadas": {
+          "name": "linhas_marcadas",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "motivos": {
+          "name": "motivos",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "executado_em": {
+          "name": "executado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "hist_movimentacao": {
+      "name": "hist_movimentacao",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "linha_planilha": {
+          "name": "linha_planilha",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "pedido_compra": {
+          "name": "pedido_compra",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "data_lancamento": {
+          "name": "data_lancamento",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "data_documento": {
+          "name": "data_documento",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "cod_pn": {
+          "name": "cod_pn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "nome_pn": {
+          "name": "nome_pn",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "cod_item": {
+          "name": "cod_item",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "desc_item": {
+          "name": "desc_item",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "qtd": {
+          "name": "qtd",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "peso": {
+          "name": "peso",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "deposito": {
+          "name": "deposito",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "n_recebimento": {
+          "name": "n_recebimento",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "data_recebimento": {
+          "name": "data_recebimento",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "nf_numero": {
+          "name": "nf_numero",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "chave_acesso": {
+          "name": "chave_acesso",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "fornecedor_cnpj": {
+          "name": "fornecedor_cnpj",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "unidade": {
+          "name": "unidade",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "grupo": {
+          "name": "grupo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "armazem_id": {
+          "name": "armazem_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "peso_kg": {
+          "name": "peso_kg",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "qualidade": {
+          "name": "qualidade",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "considerada": {
+          "name": "considerada",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": true
+        },
+        "extra": {
+          "name": "extra",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "hist_mov_linha_uk": {
+          "name": "hist_mov_linha_uk",
+          "columns": [
+            "linha_planilha"
+          ],
+          "isUnique": true
+        },
+        "hist_mov_data_receb_ix": {
+          "name": "hist_mov_data_receb_ix",
+          "columns": [
+            "data_recebimento"
+          ],
+          "isUnique": false
+        },
+        "hist_mov_chave_ix": {
+          "name": "hist_mov_chave_ix",
+          "columns": [
+            "chave_acesso"
+          ],
+          "isUnique": false
+        },
+        "hist_mov_cod_item_ix": {
+          "name": "hist_mov_cod_item_ix",
+          "columns": [
+            "cod_item"
+          ],
+          "isUnique": false
+        },
+        "hist_mov_pn_data_ix": {
+          "name": "hist_mov_pn_data_ix",
+          "columns": [
+            "cod_pn",
+            "data_recebimento"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "hist_movimentacao_armazem_id_armazem_id_fk": {
+          "name": "hist_movimentacao_armazem_id_armazem_id_fk",
+          "tableFrom": "hist_movimentacao",
+          "tableTo": "armazem",
+          "columnsFrom": [
+            "armazem_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "hist_nf_xml": {
+      "name": "hist_nf_xml",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "arquivo": {
+          "name": "arquivo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "chave_acesso": {
+          "name": "chave_acesso",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "numero": {
+          "name": "numero",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "emitente_cnpj": {
+          "name": "emitente_cnpj",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "emitente_nome": {
+          "name": "emitente_nome",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "emitida_em": {
+          "name": "emitida_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "saida_em": {
+          "name": "saida_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "valor_total": {
+          "name": "valor_total",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "peso_liquido_kg": {
+          "name": "peso_liquido_kg",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "peso_bruto_kg": {
+          "name": "peso_bruto_kg",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "volumes": {
+          "name": "volumes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "especie": {
+          "name": "especie",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "placa": {
+          "name": "placa",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "transportadora": {
+          "name": "transportadora",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "modalidade_frete": {
+          "name": "modalidade_frete",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "pedido_fornecedor": {
+          "name": "pedido_fornecedor",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "itens_qtd": {
+          "name": "itens_qtd",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "qualidade": {
+          "name": "qualidade",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "considerada": {
+          "name": "considerada",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": true
+        }
+      },
+      "indexes": {
+        "hist_nf_xml_chave_ix": {
+          "name": "hist_nf_xml_chave_ix",
+          "columns": [
+            "chave_acesso"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "hist_periodo_sem_dado": {
+      "name": "hist_periodo_sem_dado",
+      "columns": {
+        "ano_mes": {
+          "name": "ano_mes",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "tipo": {
+          "name": "tipo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "motivo": {
+          "name": "motivo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "hist_periodo_sem_dado_tipo_ck": {
+          "name": "hist_periodo_sem_dado_tipo_ck",
+          "value": "\"tipo\" IN ('sem_dado', 'parcial')"
+        }
+      }
+    },
+    "horario_grade": {
+      "name": "horario_grade",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "hora": {
+          "name": "hora",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "ativo": {
+          "name": "ativo",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": true
+        },
+        "ordem": {
+          "name": "ordem",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        }
+      },
+      "indexes": {
+        "horario_grade_hora_uk": {
+          "name": "horario_grade_hora_uk",
+          "columns": [
+            "hora"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "log_aprovacao": {
+      "name": "log_aprovacao",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "alvo": {
+          "name": "alvo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "alvo_id": {
+          "name": "alvo_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "decisao": {
+          "name": "decisao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "comentario": {
+          "name": "comentario",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "usuario_id": {
+          "name": "usuario_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "criado_em": {
+          "name": "criado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "log_aprovacao_alvo_ix": {
+          "name": "log_aprovacao_alvo_ix",
+          "columns": [
+            "alvo",
+            "alvo_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "log_aprovacao_usuario_id_usuario_id_fk": {
+          "name": "log_aprovacao_usuario_id_usuario_id_fk",
+          "tableFrom": "log_aprovacao",
+          "tableTo": "usuario",
+          "columnsFrom": [
+            "usuario_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "log_aprovacao_alvo_ck": {
+          "name": "log_aprovacao_alvo_ck",
+          "value": "\"alvo\" IN ('cadastro', 'pedido')"
+        },
+        "log_aprovacao_decisao_ck": {
+          "name": "log_aprovacao_decisao_ck",
+          "value": "\"decisao\" IN ('aprovado', 'recusado')"
+        }
+      }
+    },
+    "nao_recebimento": {
+      "name": "nao_recebimento",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "agendamento_id": {
+          "name": "agendamento_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "fornecedor_id": {
+          "name": "fornecedor_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "placa": {
+          "name": "placa",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "motivo": {
+          "name": "motivo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "descricao": {
+          "name": "descricao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "registrado_por": {
+          "name": "registrado_por",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "registrado_em": {
+          "name": "registrado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "origem": {
+          "name": "origem",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "nao_recebimento_agendamento_uk": {
+          "name": "nao_recebimento_agendamento_uk",
+          "columns": [
+            "agendamento_id"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "nao_recebimento_agendamento_id_agendamento_id_fk": {
+          "name": "nao_recebimento_agendamento_id_agendamento_id_fk",
+          "tableFrom": "nao_recebimento",
+          "tableTo": "agendamento",
+          "columnsFrom": [
+            "agendamento_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "nao_recebimento_fornecedor_id_fornecedor_id_fk": {
+          "name": "nao_recebimento_fornecedor_id_fornecedor_id_fk",
+          "tableFrom": "nao_recebimento",
+          "tableTo": "fornecedor",
+          "columnsFrom": [
+            "fornecedor_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "nao_recebimento_motivo_ck": {
+          "name": "nao_recebimento_motivo_ck",
+          "value": "\"motivo\" IN ('divergencia_nota_pedido', 'sem_agendamento_sem_vaga', 'caso_fortuito', 'outro')"
+        },
+        "nao_recebimento_origem_ck": {
+          "name": "nao_recebimento_origem_ck",
+          "value": "\"origem\" IN ('historico', 'teste', 'operacao')"
+        }
+      }
+    },
+    "norma_chapas": {
+      "name": "norma_chapas",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "perfil": {
+          "name": "perfil",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "acondicionamento": {
+          "name": "acondicionamento",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "peso_min_kg_exclusivo": {
+          "name": "peso_min_kg_exclusivo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "chapas": {
+          "name": "chapas",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "empilhadeira": {
+          "name": "empilhadeira",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": false
+        },
+        "duracao_min": {
+          "name": "duracao_min",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "norma_chapas_perfil_ck": {
+          "name": "norma_chapas_perfil_ck",
+          "value": "\"perfil\" IN ('agrovia', 'dossie')"
+        },
+        "norma_chapas_acondicionamento_ck": {
+          "name": "norma_chapas_acondicionamento_ck",
+          "value": "\"acondicionamento\" IN ('batido', 'paletizado', 'big_bag', 'maquina')"
+        }
+      }
+    },
+    "nota_fiscal": {
+      "name": "nota_fiscal",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "chave_acesso": {
+          "name": "chave_acesso",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "numero": {
+          "name": "numero",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "serie": {
+          "name": "serie",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "emitente_cnpj": {
+          "name": "emitente_cnpj",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "emitente_nome": {
+          "name": "emitente_nome",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "fornecedor_id": {
+          "name": "fornecedor_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "emitida_em": {
+          "name": "emitida_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "valor_total": {
+          "name": "valor_total",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "peso_bruto_kg": {
+          "name": "peso_bruto_kg",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "peso_liquido_kg": {
+          "name": "peso_liquido_kg",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "volumes": {
+          "name": "volumes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "especie": {
+          "name": "especie",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "placa": {
+          "name": "placa",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "transportadora": {
+          "name": "transportadora",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "pedido_fornecedor": {
+          "name": "pedido_fornecedor",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "forma_entrada": {
+          "name": "forma_entrada",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'xml'"
+        },
+        "origem": {
+          "name": "origem",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "criada_em": {
+          "name": "criada_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "nota_fiscal_chave_uk": {
+          "name": "nota_fiscal_chave_uk",
+          "columns": [
+            "chave_acesso"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "nota_fiscal_fornecedor_id_fornecedor_id_fk": {
+          "name": "nota_fiscal_fornecedor_id_fornecedor_id_fk",
+          "tableFrom": "nota_fiscal",
+          "tableTo": "fornecedor",
+          "columnsFrom": [
+            "fornecedor_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "nota_fiscal_origem_ck": {
+          "name": "nota_fiscal_origem_ck",
+          "value": "\"origem\" IN ('historico', 'teste', 'operacao')"
+        }
+      }
+    },
+    "nota_fiscal_arquivo": {
+      "name": "nota_fiscal_arquivo",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "nota_fiscal_id": {
+          "name": "nota_fiscal_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "nome": {
+          "name": "nome",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "tipo_mime": {
+          "name": "tipo_mime",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "tamanho_bytes": {
+          "name": "tamanho_bytes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "conteudo": {
+          "name": "conteudo",
+          "type": "blob",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "criado_em": {
+          "name": "criado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "nota_fiscal_arquivo_nf_ix": {
+          "name": "nota_fiscal_arquivo_nf_ix",
+          "columns": [
+            "nota_fiscal_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "nota_fiscal_arquivo_nota_fiscal_id_nota_fiscal_id_fk": {
+          "name": "nota_fiscal_arquivo_nota_fiscal_id_nota_fiscal_id_fk",
+          "tableFrom": "nota_fiscal_arquivo",
+          "tableTo": "nota_fiscal",
+          "columnsFrom": [
+            "nota_fiscal_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "nota_fiscal_item": {
+      "name": "nota_fiscal_item",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "nota_fiscal_id": {
+          "name": "nota_fiscal_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "codigo_fornecedor": {
+          "name": "codigo_fornecedor",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "descricao": {
+          "name": "descricao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "quantidade": {
+          "name": "quantidade",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "unidade": {
+          "name": "unidade",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "valor_unitario": {
+          "name": "valor_unitario",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "produto_id": {
+          "name": "produto_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "nota_fiscal_item_nf_ix": {
+          "name": "nota_fiscal_item_nf_ix",
+          "columns": [
+            "nota_fiscal_id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "nota_fiscal_item_nota_fiscal_id_nota_fiscal_id_fk": {
+          "name": "nota_fiscal_item_nota_fiscal_id_nota_fiscal_id_fk",
+          "tableFrom": "nota_fiscal_item",
+          "tableTo": "nota_fiscal",
+          "columnsFrom": [
+            "nota_fiscal_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "nota_fiscal_item_produto_id_produto_id_fk": {
+          "name": "nota_fiscal_item_produto_id_produto_id_fk",
+          "tableFrom": "nota_fiscal_item",
+          "tableTo": "produto",
+          "columnsFrom": [
+            "produto_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "notificacao": {
+      "name": "notificacao",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "usuario_id": {
+          "name": "usuario_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "tipo": {
+          "name": "tipo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "mensagem": {
+          "name": "mensagem",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "link": {
+          "name": "link",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "lida": {
+          "name": "lida",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": false
+        },
+        "criado_em": {
+          "name": "criado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "notificacao_usuario_ix": {
+          "name": "notificacao_usuario_ix",
+          "columns": [
+            "usuario_id",
+            "lida"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "notificacao_usuario_id_usuario_id_fk": {
+          "name": "notificacao_usuario_id_usuario_id_fk",
+          "tableFrom": "notificacao",
+          "tableTo": "usuario",
+          "columnsFrom": [
+            "usuario_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "parametro": {
+      "name": "parametro",
+      "columns": {
+        "chave": {
+          "name": "chave",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "valor": {
+          "name": "valor",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "descricao": {
+          "name": "descricao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "pendencia": {
+      "name": "pendencia",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "agendamento_id": {
+          "name": "agendamento_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "tipo": {
+          "name": "tipo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "descricao": {
+          "name": "descricao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'aberta'"
+        },
+        "aberta_por": {
+          "name": "aberta_por",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "aberta_em": {
+          "name": "aberta_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "resolvida_por": {
+          "name": "resolvida_por",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "resolvida_em": {
+          "name": "resolvida_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "resolucao": {
+          "name": "resolucao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "pendencia_agendamento_ix": {
+          "name": "pendencia_agendamento_ix",
+          "columns": [
+            "agendamento_id"
+          ],
+          "isUnique": false
+        },
+        "pendencia_status_ix": {
+          "name": "pendencia_status_ix",
+          "columns": [
+            "status"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "pendencia_agendamento_id_agendamento_id_fk": {
+          "name": "pendencia_agendamento_id_agendamento_id_fk",
+          "tableFrom": "pendencia",
+          "tableTo": "agendamento",
+          "columnsFrom": [
+            "agendamento_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "pendencia_tipo_ck": {
+          "name": "pendencia_tipo_ck",
+          "value": "\"tipo\" IN ('divergencia_nf_pedido', 'outra')"
+        },
+        "pendencia_status_ck": {
+          "name": "pendencia_status_ck",
+          "value": "\"status\" IN ('aberta', 'resolvida')"
+        }
+      }
+    },
+    "previsao_tempo": {
+      "name": "previsao_tempo",
+      "columns": {
+        "data": {
+          "name": "data",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "resumo": {
+          "name": "resumo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "chuva_prob": {
+          "name": "chuva_prob",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "fonte": {
+          "name": "fonte",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "atualizado_em": {
+          "name": "atualizado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "produto": {
+      "name": "produto",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "item": {
+          "name": "item",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "descricao": {
+          "name": "descricao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "unidade": {
+          "name": "unidade",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "peso_unitario_kg": {
+          "name": "peso_unitario_kg",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "subgrupo": {
+          "name": "subgrupo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "grupo": {
+          "name": "grupo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "deposito": {
+          "name": "deposito",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "''"
+        },
+        "armazem_id": {
+          "name": "armazem_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "produto_item_deposito_uk": {
+          "name": "produto_item_deposito_uk",
+          "columns": [
+            "item",
+            "deposito"
+          ],
+          "isUnique": true
+        },
+        "produto_grupo_ix": {
+          "name": "produto_grupo_ix",
+          "columns": [
+            "grupo"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "produto_armazem_id_armazem_id_fk": {
+          "name": "produto_armazem_id_armazem_id_fk",
+          "tableFrom": "produto",
+          "tableTo": "armazem",
+          "columnsFrom": [
+            "armazem_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "tipo_item": {
+      "name": "tipo_item",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "nome": {
+          "name": "nome",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "preco_unitario": {
+          "name": "preco_unitario",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "categoria": {
+          "name": "categoria",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'item'"
+        },
+        "ordem": {
+          "name": "ordem",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "ativo": {
+          "name": "ativo",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": true
+        }
+      },
+      "indexes": {
+        "tipo_item_nome_uk": {
+          "name": "tipo_item_nome_uk",
+          "columns": [
+            "nome"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "tipo_item_categoria_ck": {
+          "name": "tipo_item_categoria_ck",
+          "value": "\"categoria\" IN ('item', 'diaria')"
+        }
+      }
+    },
+    "usuario": {
+      "name": "usuario",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "nome": {
+          "name": "nome",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "papel": {
+          "name": "papel",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "armazem_id": {
+          "name": "armazem_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "fornecedor_id": {
+          "name": "fornecedor_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "senha_hash": {
+          "name": "senha_hash",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "perfil": {
+          "name": "perfil",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "ativo": {
+          "name": "ativo",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": true
+        },
+        "trocar_senha": {
+          "name": "trocar_senha",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": false
+        },
+        "token_senha": {
+          "name": "token_senha",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "token_senha_expira": {
+          "name": "token_senha_expira",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "criado_em": {
+          "name": "criado_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "usuario_email_uk": {
+          "name": "usuario_email_uk",
+          "columns": [
+            "email"
+          ],
+          "isUnique": true
+        },
+        "usuario_token_senha_uk": {
+          "name": "usuario_token_senha_uk",
+          "columns": [
+            "token_senha"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "usuario_armazem_id_armazem_id_fk": {
+          "name": "usuario_armazem_id_armazem_id_fk",
+          "tableFrom": "usuario",
+          "tableTo": "armazem",
+          "columnsFrom": [
+            "armazem_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "usuario_fornecedor_id_fornecedor_id_fk": {
+          "name": "usuario_fornecedor_id_fornecedor_id_fk",
+          "tableFrom": "usuario",
+          "tableTo": "fornecedor",
+          "columnsFrom": [
+            "fornecedor_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "vaga_liberada": {
+      "name": "vaga_liberada",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "data": {
+          "name": "data",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "horario": {
+          "name": "horario",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "origem_agendamento_id": {
+          "name": "origem_agendamento_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "ocupada_por_agendamento_id": {
+          "name": "ocupada_por_agendamento_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "definido_por": {
+          "name": "definido_por",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "definido_em": {
+          "name": "definido_em",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "vaga_liberada_data_horario_ix": {
+          "name": "vaga_liberada_data_horario_ix",
+          "columns": [
+            "data",
+            "horario"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "vaga_liberada_origem_agendamento_id_agendamento_id_fk": {
+          "name": "vaga_liberada_origem_agendamento_id_agendamento_id_fk",
+          "tableFrom": "vaga_liberada",
+          "tableTo": "agendamento",
+          "columnsFrom": [
+            "origem_agendamento_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "vaga_liberada_ocupada_por_agendamento_id_agendamento_id_fk": {
+          "name": "vaga_liberada_ocupada_por_agendamento_id_agendamento_id_fk",
+          "tableFrom": "vaga_liberada",
+          "tableTo": "agendamento",
+          "columnsFrom": [
+            "ocupada_por_agendamento_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}

@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3576" height="1510" viewBox="0 0 3576 1510" font-family="Arial, Helvetica, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#333"/></marker></defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="40" y="26" font-size="20" font-weight="bold" fill="#005BA0">Processo proposto de recebimento de carga (BPMN 2.0)</text>
+<rect x="40" y="40" width="3536" height="1450" fill="none" stroke="#333" stroke-width="2"/>
+<rect x="70" y="40" width="3506" height="260" fill="#E8F1FA" fill-opacity="0.55" stroke="#333"/>
+<rect x="40" y="40" width="30" height="260" fill="#fff" stroke="#333"/>
+<text transform="translate(60,170) rotate(-90)" text-anchor="middle" font-size="14" font-weight="bold">Fornecedor</text>
+<rect x="70" y="300" width="3506" height="150" fill="#F1F8EC" fill-opacity="0.55" stroke="#333"/>
+<rect x="40" y="300" width="30" height="150" fill="#fff" stroke="#333"/>
+<text transform="translate(60,375) rotate(-90)" text-anchor="middle" font-size="14" font-weight="bold">Compras</text>
+<rect x="70" y="450" width="3506" height="260" fill="#EEF0F4" fill-opacity="0.55" stroke="#333"/>
+<rect x="40" y="450" width="30" height="260" fill="#fff" stroke="#333"/>
+<text transform="translate(60,580) rotate(-90)" text-anchor="middle" font-size="14" font-weight="bold">Sistema</text>
+<rect x="70" y="710" width="3506" height="260" fill="#FFF7E0" fill-opacity="0.55" stroke="#333"/>
+<rect x="40" y="710" width="30" height="260" fill="#fff" stroke="#333"/>
+<text transform="translate(60,840) rotate(-90)" text-anchor="middle" font-size="14" font-weight="bold">Portaria</text>
+<rect x="70" y="970" width="3506" height="370" fill="#E8F1FA" fill-opacity="0.55" stroke="#333"/>
+<rect x="40" y="970" width="30" height="370" fill="#fff" stroke="#333"/>
+<text transform="translate(60,1155) rotate(-90)" text-anchor="middle" font-size="14" font-weight="bold">Gestor de armazém</text>
+<rect x="70" y="1340" width="3506" height="150" fill="#F1F8EC" fill-opacity="0.55" stroke="#333"/>
+<rect x="40" y="1340" width="30" height="150" fill="#fff" stroke="#333"/>
+<text transform="translate(60,1415) rotate(-90)" text-anchor="middle" font-size="14" font-weight="bold">Direção</text>
+<polyline points="217,375 289,375" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="407,375 423,375 423,115 437,115" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<text x="413" y="369" font-size="11" fill="#7a2e00" stroke="#fff" stroke-width="3" paint-order="stroke">link</text>
+<polyline points="555,115 585,115" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="703,115 756,115 756,525 770,525" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="792,547 792,635 703,635" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="798" y="561" font-size="11" fill="#7a2e00" stroke="#fff" stroke-width="3" paint-order="stroke">não</text>
+<polyline points="644,603 644,147" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="814,525 881,525" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="820" y="519" font-size="11" fill="#7a2e00" stroke="#fff" stroke-width="3" paint-order="stroke">sim</text>
+<polyline points="999,525 1015,525 1015,375 1029,375" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1147,375 1214,375" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1258,375 1348,375 1348,115 1362,115" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="1264" y="369" font-size="11" fill="#7a2e00" stroke="#fff" stroke-width="3" paint-order="stroke">aprovado</text>
+<polyline points="1258,375 1289,375 1289,635 1325,635" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="1264" y="369" font-size="11" fill="#7a2e00" stroke="#fff" stroke-width="3" paint-order="stroke">recusado</text>
+<polyline points="1384,137 1384,603" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="1390" y="151" font-size="11" fill="#7a2e00" stroke="#fff" stroke-width="3" paint-order="stroke">cancela</text>
+<polyline points="1443,635 1459,635 1459,1155 1473,1155" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1591,1155 1663,1155" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1406,115 1621,115" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="1412" y="109" font-size="11" fill="#7a2e00" stroke="#fff" stroke-width="3" paint-order="stroke">no horário</text>
+<polyline points="1406,115 1415,115 1415,225 1473,225" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="1412" y="109" font-size="11" fill="#7a2e00" stroke="#fff" stroke-width="3" paint-order="stroke">atraso</text>
+<polyline points="1591,225 1607,225 1607,115 1621,115" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1739,115 1755,115 1755,785 1769,785" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<text x="1745" y="109" font-size="11" fill="#7a2e00" stroke="#fff" stroke-width="3" paint-order="stroke">caminhão</text>
+<polyline points="1887,785 1954,785" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="1998,785 2361,785" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="2004" y="779" font-size="11" fill="#7a2e00" stroke="#fff" stroke-width="3" paint-order="stroke">sim</text>
+<polyline points="1998,785 2066,785 2066,895 2102,895" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="2004" y="779" font-size="11" fill="#7a2e00" stroke="#fff" stroke-width="3" paint-order="stroke">não</text>
+<polyline points="2146,895 2213,895" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="2152" y="889" font-size="11" fill="#7a2e00" stroke="#fff" stroke-width="3" paint-order="stroke">sim</text>
+<polyline points="2146,895 2177,895 2177,635 2213,635" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="2152" y="889" font-size="11" fill="#7a2e00" stroke="#fff" stroke-width="3" paint-order="stroke">não</text>
+<polyline points="2331,635 2403,635" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="2331,895 2347,895 2347,785 2361,785" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="2479,785 2495,785 2495,1155 2509,1155" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="2627,1155 2694,1155" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="2738,1155 2791,1155 2791,1045 2805,1045" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="2744" y="1149" font-size="11" fill="#7a2e00" stroke="#fff" stroke-width="3" paint-order="stroke">pequena</text>
+<polyline points="2738,1155 2769,1155 2769,1265 2805,1265" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="2744" y="1149" font-size="11" fill="#7a2e00" stroke="#fff" stroke-width="3" paint-order="stroke">grave</text>
+<polyline points="2738,1155 2953,1155" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="2744" y="1149" font-size="11" fill="#7a2e00" stroke="#fff" stroke-width="3" paint-order="stroke">não</text>
+<polyline points="2923,1045 2939,1045 2939,1155 2953,1155" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="2923,1265 2995,1265" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="3071,1155 3101,1155" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="3160,1123 3160,557" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="3219,525 3235,525 3235,1415 3249,1415" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<polyline points="3367,1415 3439,1415" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#a)"/>
+<circle cx="200" cy="375" r="17" fill="#fff" stroke="#2e7d32" stroke-width="2"/>
+<text x="200" y="406" text-anchor="middle" font-size="11">Pedido de compra</text>
+<text x="200" y="418" text-anchor="middle" font-size="11">emitido</text>
+<rect x="289" y="343" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="348" y="372.5" text-anchor="middle" font-size="11.5">Criar compra e</text>
+<text x="348" y="385.5" text-anchor="middle" font-size="11.5">gerar link</text>
+<rect x="437" y="83" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="496" y="112.5" text-anchor="middle" font-size="11.5">Anexar NF-e (XML</text>
+<text x="496" y="125.5" text-anchor="middle" font-size="11.5">ou PDF)</text>
+<rect x="585" y="83" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="644" y="112.5" text-anchor="middle" font-size="11.5">Escolher data e</text>
+<text x="644" y="125.5" text-anchor="middle" font-size="11.5">horário</text>
+<polygon points="792,503 814,525 792,547 770,525" fill="#FFF7E0" stroke="#b58900" stroke-width="2"/><path d="M784 517L800 533M800 517L784 533" stroke="#b58900" stroke-width="2"/>
+<text x="792" y="497" text-anchor="middle" font-size="11" font-weight="bold">Horário livre?</text>
+<rect x="585" y="603" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="644" y="632.5" text-anchor="middle" font-size="11.5">Mostrar a próxima</text>
+<text x="644" y="645.5" text-anchor="middle" font-size="11.5">data disponível</text>
+<rect x="881" y="493" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="940" y="509.5" text-anchor="middle" font-size="11.5">Gravar</text>
+<text x="940" y="522.5" text-anchor="middle" font-size="11.5">agendamento e</text>
+<text x="940" y="535.5" text-anchor="middle" font-size="11.5">dimensionar</text>
+<text x="940" y="548.5" text-anchor="middle" font-size="11.5">chapas</text>
+<rect x="1029" y="343" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="1088" y="372.5" text-anchor="middle" font-size="11.5">Validar NF ×</text>
+<text x="1088" y="385.5" text-anchor="middle" font-size="11.5">pedido e aprovar</text>
+<polygon points="1236,353 1258,375 1236,397 1214,375" fill="#FFF7E0" stroke="#b58900" stroke-width="2"/><path d="M1228 367L1244 383M1244 367L1228 383" stroke="#b58900" stroke-width="2"/>
+<text x="1236" y="347" text-anchor="middle" font-size="11" font-weight="bold">Aprovado?</text>
+<rect x="1325" y="603" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="1384" y="639" text-anchor="middle" font-size="11.5">Liberar a vaga</text>
+<rect x="1473" y="1123" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="1532" y="1152.5" text-anchor="middle" font-size="11.5">Ocupar a vaga com</text>
+<text x="1532" y="1165.5" text-anchor="middle" font-size="11.5">outro agendado</text>
+<circle cx="1680" cy="1155" r="17" fill="#fff" stroke="#b00020" stroke-width="4"/>
+<text x="1680" y="1186" text-anchor="middle" font-size="11">Vaga reocupada</text>
+<polygon points="1384,93 1406,115 1384,137 1362,115" fill="#FFF7E0" stroke="#b58900" stroke-width="2"/><path d="M1376 107L1392 123M1392 107L1376 123" stroke="#b58900" stroke-width="2"/>
+<text x="1384" y="75" text-anchor="middle" font-size="11" font-weight="bold">Vai chegar no</text>
+<text x="1384" y="87" text-anchor="middle" font-size="11" font-weight="bold">horário?</text>
+<rect x="1473" y="193" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="1532" y="229" text-anchor="middle" font-size="11.5">Avisar atraso</text>
+<rect x="1621" y="83" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="1680" y="119" text-anchor="middle" font-size="11.5">Enviar o caminhão</text>
+<rect x="1769" y="753" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="1828" y="776" text-anchor="middle" font-size="11.5">Ler código de</text>
+<text x="1828" y="789" text-anchor="middle" font-size="11.5">barras e conferir</text>
+<text x="1828" y="802" text-anchor="middle" font-size="11.5">a NF</text>
+<polygon points="1976,763 1998,785 1976,807 1954,785" fill="#FFF7E0" stroke="#b58900" stroke-width="2"/><path d="M1968 777L1984 793M1984 777L1968 793" stroke="#b58900" stroke-width="2"/>
+<text x="1976" y="745" text-anchor="middle" font-size="11" font-weight="bold">Tem</text>
+<text x="1976" y="757" text-anchor="middle" font-size="11" font-weight="bold">agendamento?</text>
+<polygon points="2124,873 2146,895 2124,917 2102,895" fill="#FFF7E0" stroke="#b58900" stroke-width="2"/><path d="M2116 887L2132 903M2132 887L2116 903" stroke="#b58900" stroke-width="2"/>
+<text x="2124" y="867" text-anchor="middle" font-size="11" font-weight="bold">Há vaga hoje?</text>
+<rect x="2213" y="863" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="2272" y="886" text-anchor="middle" font-size="11.5">Agendar na hora</text>
+<text x="2272" y="899" text-anchor="middle" font-size="11.5">com os dados da</text>
+<text x="2272" y="912" text-anchor="middle" font-size="11.5">NF</text>
+<rect x="2361" y="753" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="2420" y="782.5" text-anchor="middle" font-size="11.5">Registrar chegada</text>
+<text x="2420" y="795.5" text-anchor="middle" font-size="11.5">e peso</text>
+<rect x="2213" y="603" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="2272" y="626" text-anchor="middle" font-size="11.5">Mostrar a próxima</text>
+<text x="2272" y="639" text-anchor="middle" font-size="11.5">data e registrar</text>
+<text x="2272" y="652" text-anchor="middle" font-size="11.5">não recebimento</text>
+<circle cx="2420" cy="635" r="17" fill="#fff" stroke="#b00020" stroke-width="4"/>
+<text x="2420" y="666" text-anchor="middle" font-size="11">Sem vaga</text>
+<rect x="2509" y="1123" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="2568" y="1152.5" text-anchor="middle" font-size="11.5">Autorizar e</text>
+<text x="2568" y="1165.5" text-anchor="middle" font-size="11.5">definir armazéns</text>
+<polygon points="2716,1133 2738,1155 2716,1177 2694,1155" fill="#FFF7E0" stroke="#b58900" stroke-width="2"/><path d="M2708 1147L2724 1163M2724 1147L2708 1163" stroke="#b58900" stroke-width="2"/>
+<text x="2716" y="1115" text-anchor="middle" font-size="11" font-weight="bold">Divergência NF</text>
+<text x="2716" y="1127" text-anchor="middle" font-size="11" font-weight="bold">× pedido?</text>
+<rect x="2805" y="1013" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="2864" y="1042.5" text-anchor="middle" font-size="11.5">Receber e abrir</text>
+<text x="2864" y="1055.5" text-anchor="middle" font-size="11.5">pendência</text>
+<rect x="2805" y="1233" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="2864" y="1256" text-anchor="middle" font-size="11.5">Registrar não</text>
+<text x="2864" y="1269" text-anchor="middle" font-size="11.5">recebimento com</text>
+<text x="2864" y="1282" text-anchor="middle" font-size="11.5">motivo</text>
+<circle cx="3012" cy="1265" r="17" fill="#fff" stroke="#b00020" stroke-width="4"/>
+<text x="3012" y="1296" text-anchor="middle" font-size="11">Não recebido</text>
+<rect x="2953" y="1123" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="3012" y="1139.5" text-anchor="middle" font-size="11.5">Descarga:</text>
+<text x="3012" y="1152.5" text-anchor="middle" font-size="11.5">entrada, saída,</text>
+<text x="3012" y="1165.5" text-anchor="middle" font-size="11.5">chapas e</text>
+<text x="3012" y="1178.5" text-anchor="middle" font-size="11.5">equipamentos</text>
+<rect x="3101" y="1123" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="3160" y="1152.5" text-anchor="middle" font-size="11.5">Lançar o boletim</text>
+<text x="3160" y="1165.5" text-anchor="middle" font-size="11.5">do dia</text>
+<rect x="3101" y="493" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="3160" y="509.5" text-anchor="middle" font-size="11.5">Calcular piso e</text>
+<text x="3160" y="522.5" text-anchor="middle" font-size="11.5">complemento e</text>
+<text x="3160" y="535.5" text-anchor="middle" font-size="11.5">atualizar o</text>
+<text x="3160" y="548.5" text-anchor="middle" font-size="11.5">painel</text>
+<rect x="3249" y="1383" width="118" height="64" rx="9" fill="#fff" stroke="#005BA0" stroke-width="2"/>
+<text x="3308" y="1406" text-anchor="middle" font-size="11.5">Ler a resposta:</text>
+<text x="3308" y="1419" text-anchor="middle" font-size="11.5">sobra ou falta de</text>
+<text x="3308" y="1432" text-anchor="middle" font-size="11.5">chapas</text>
+<circle cx="3456" cy="1415" r="17" fill="#fff" stroke="#b00020" stroke-width="4"/>
+<text x="3456" y="1446" text-anchor="middle" font-size="11">Decisão de</text>
+<text x="3456" y="1458" text-anchor="middle" font-size="11">escala</text>
+<g font-size="12"><text x="40" y="1504" fill="#333">Legenda: círculo verde = início; círculo vermelho = fim; losango = decisão (gateway exclusivo); retângulo = tarefa de usuário; seta tracejada = mensagem entre raias (link e caminhão).</text></g>
+</svg>

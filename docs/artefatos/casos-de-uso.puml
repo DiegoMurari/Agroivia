@@ -1,0 +1,228 @@
+@startuml cu-1-acesso
+!pragma layout smetana
+skinparam shadowing false
+skinparam dpi 120
+skinparam actorStyle awesome
+skinparam usecaseBackgroundColor #FFFFFF
+skinparam usecaseBorderColor #005BA0
+skinparam rectangleBackgroundColor #F4F7FA
+skinparam usecaseBorderColor #005BA0
+title 1 de 6 · Acesso e aprovações
+actor "Fornecedor" as FOR
+actor "Compras" as COM
+actor "Adm Master" as ADM
+rectangle "Recebimento Inteligente" {
+  usecase "UC01 Entrar no sistema\n(login por perfil)" as UC01
+  usecase "UC02 Cadastrar fornecedor\npor convite" as UC02
+  usecase "UC03 Aprovar ou recusar\ncadastro de fornecedor" as UC03
+  usecase "UC04 Aprovar ou recusar\npedido do fornecedor" as UC04
+  usecase "UC05 Gerir usuários e perfis" as UC05
+  usecase "UC06 Recuperar senha" as UC06
+  usecase "UC07 Ver notificações" as UC07
+  usecase "UC08 Enviar convite\nde cadastro" as UC08
+}
+FOR --> UC01
+FOR --> UC02
+FOR --> UC06
+FOR --> UC07
+COM --> UC01
+COM --> UC03
+COM --> UC04
+COM --> UC08
+COM --> UC07
+ADM --> UC01
+ADM --> UC05
+ADM --> UC03
+UC02 ..> UC01 : <<extend>>
+UC03 ..> UC07 : <<include>>
+UC04 ..> UC07 : <<include>>
+@enduml
+
+@startuml cu-2-agendamento
+!pragma layout smetana
+skinparam shadowing false
+skinparam dpi 120
+skinparam actorStyle awesome
+skinparam usecaseBackgroundColor #FFFFFF
+skinparam usecaseBorderColor #005BA0
+skinparam rectangleBackgroundColor #F4F7FA
+skinparam usecaseBorderColor #005BA0
+title 2 de 6 · Agendamento (Tarefa 1)
+actor "Fornecedor" as FOR
+actor "Compras" as COM
+actor "Gestor de armazém" as ARM
+rectangle "Recebimento Inteligente" {
+  usecase "UC10 Criar compra e gerar\nlink de uso único" as UC10
+  usecase "UC11 Agendar descarga\n(link ou portal)" as UC11
+  usecase "UC12 Anexar NF-e (XML ou PDF)" as UC12
+  usecase "UC13 Escolher data e horário\n(regra de ocupação)" as UC13
+  usecase "UC14 Dimensionar chapas e\nequipamentos da carga" as UC14
+  usecase "UC15 Validar NF × pedido" as UC15
+  usecase "UC16 Autorizar e definir\narmazéns de destino" as UC16
+  usecase "UC17 Cancelar agendamento" as UC17
+  usecase "UC18 Ocupar vaga liberada" as UC18
+  usecase "UC19 Reagendar por\ncaso fortuito" as UC19
+  usecase "UC20 Avisar atraso" as UC20
+  usecase "UC21 Remarcar por atraso" as UC21
+  usecase "UC22 Dar prioridade com\njustificativa" as UC22
+  usecase "UC23 Ver calendário e\nhistórico do fornecedor" as UC23
+}
+COM --> UC10
+COM --> UC15
+COM --> UC16
+FOR --> UC11
+FOR --> UC17
+FOR --> UC20
+FOR --> UC23
+ARM --> UC16
+ARM --> UC17
+ARM --> UC18
+ARM --> UC19
+ARM --> UC21
+ARM --> UC22
+UC11 ..> UC12 : <<include>>
+UC11 ..> UC13 : <<include>>
+UC11 ..> UC14 : <<include>>
+UC18 ..> UC17 : <<extend>>
+UC22 ..> UC19 : <<extend>>
+@enduml
+
+@startuml cu-3-portaria
+!pragma layout smetana
+skinparam shadowing false
+skinparam dpi 120
+skinparam actorStyle awesome
+skinparam usecaseBackgroundColor #FFFFFF
+skinparam usecaseBorderColor #005BA0
+skinparam rectangleBackgroundColor #F4F7FA
+skinparam usecaseBorderColor #005BA0
+title 3 de 6 · Portaria e conferência da nota
+actor "Portaria" as POR
+actor "Consulta da NF-e pela chave\n(pacote de XML / SEFAZ)" as SEFAZ <<sistema>>
+rectangle "Recebimento Inteligente" {
+  usecase "UC30 Ler código de barras\nda NF-e pela câmera" as UC30
+  usecase "UC31 Conferir NF com o\nagendamento" as UC31
+  usecase "UC32 Registrar chegada e\npeso da balança" as UC32
+  usecase "UC33 Atender caminhão\nsem agendamento" as UC33
+  usecase "UC34 Preencher o pedido a partir\nda NF (XML ou só a chave)" as UC34
+  usecase "UC35 Consultar histórico\nda placa" as UC35
+  usecase "UC36 Digitar a chave\nou anexar o XML" as UC36
+}
+POR --> UC31
+POR --> UC32
+POR --> UC33
+UC31 ..> UC30 : <<include>>
+UC30 ..> UC36 : <<extend>>
+UC31 ..> UC35 : <<include>>
+UC33 ..> UC34 : <<include>>
+UC33 ..> UC35 : <<include>>
+UC30 --> SEFAZ
+UC34 --> SEFAZ
+@enduml
+
+@startuml cu-4-dia
+!pragma layout smetana
+skinparam shadowing false
+skinparam dpi 120
+skinparam actorStyle awesome
+skinparam usecaseBackgroundColor #FFFFFF
+skinparam usecaseBorderColor #005BA0
+skinparam rectangleBackgroundColor #F4F7FA
+skinparam usecaseBorderColor #005BA0
+title 4 de 6 · Operação do dia e auditoria
+actor "Gestor de armazém" as ARM
+actor "Compras" as COM
+actor "Direção / Adm Master" as DIR
+actor "Previsão do tempo\n(serviço externo)" as TEMPO <<sistema>>
+rectangle "Recebimento Inteligente" {
+  usecase "UC40 Acompanhar o Hoje\n(a chegar, no pátio, descarregando)" as UC40
+  usecase "UC41 Iniciar e encerrar descarga\n(entrada e saída por armazém)" as UC41
+  usecase "UC42 Informar chapas e\nequipamentos" as UC42
+  usecase "UC43 Registrar não recebimento" as UC43
+  usecase "UC44 Abrir e resolver pendência" as UC44
+  usecase "UC45 Desfazer último registro" as UC45
+  usecase "UC46 Ver alertas e\nprevisão do tempo" as UC46
+  usecase "UC47 Consultar relatório\nde chegadas" as UC47
+  usecase "UC48 Consultar auditoria\nda trajetória" as UC48
+  usecase "UC49 Marcar chegada\nde caminhão agendado" as UC49
+}
+ARM --> UC40
+ARM --> UC41
+ARM --> UC43
+ARM --> UC44
+ARM --> UC45
+ARM --> UC47
+ARM --> UC49
+COM --> UC40
+COM --> UC48
+DIR --> UC40
+DIR --> UC48
+UC41 ..> UC42 : <<include>>
+UC40 ..> UC46 : <<include>>
+UC43 ..> UC44 : <<extend>>
+UC46 --> TEMPO
+@enduml
+
+@startuml cu-5-boletim
+!pragma layout smetana
+skinparam shadowing false
+skinparam dpi 120
+skinparam actorStyle awesome
+skinparam usecaseBackgroundColor #FFFFFF
+skinparam usecaseBorderColor #005BA0
+skinparam rectangleBackgroundColor #F4F7FA
+skinparam usecaseBorderColor #005BA0
+title 5 de 6 · Boletim diário (Tarefa 2) e cadastros
+actor "Gestor de armazém" as ARM
+actor "Compras" as COM
+rectangle "Recebimento Inteligente" {
+  usecase "UC50 Lançar boletim do\ndia por armazém" as UC50
+  usecase "UC51 Escalar equipe de chapas\n(completa ou meia diária)" as UC51
+  usecase "UC52 Calcular piso e\ncomplemento" as UC52
+  usecase "UC53 Corrigir e imprimir boletim" as UC53
+  usecase "UC54 Ver calendário de boletins\ne aviso de boletim faltando" as UC54
+  usecase "UC70 Manter cadastros\n(armazéns, equipamentos, chapas)" as UC70
+}
+ARM --> UC50
+ARM --> UC53
+ARM --> UC54
+ARM --> UC70
+COM --> UC70
+UC50 ..> UC51 : <<include>>
+UC50 ..> UC52 : <<include>>
+@enduml
+
+@startuml cu-6-painel
+!pragma layout smetana
+skinparam shadowing false
+skinparam dpi 120
+skinparam actorStyle awesome
+skinparam usecaseBackgroundColor #FFFFFF
+skinparam usecaseBorderColor #005BA0
+skinparam rectangleBackgroundColor #F4F7FA
+skinparam usecaseBorderColor #005BA0
+title 6 de 6 · Painel gerencial (Tarefa 3)
+actor "Direção" as DIR
+actor "Gestor de armazém" as ARM
+actor "Modelo de linguagem\n(opcional)" as LLM <<sistema>>
+rectangle "Recebimento Inteligente" {
+  usecase "UC60 Consultar sobra ou falta\nde chapas (chapas e R$)" as UC60
+  usecase "UC61 Ver previsão de chapas da\nsemana (mínimo e máximo)" as UC61
+  usecase "UC62 Consultar cargas, custo,\nfornecedores e movimento" as UC62
+  usecase "UC63 Copiar aviso ao prestador" as UC63
+  usecase "UC64 Perguntar ao painel" as UC64
+  usecase "UC65 Filtrar período de análise" as UC65
+  usecase "UC66 Ler relatório gerencial" as UC66
+}
+DIR --> UC60
+DIR --> UC61
+DIR --> UC62
+DIR --> UC63
+DIR --> UC64
+DIR --> UC66
+ARM --> UC61
+ARM --> UC63
+UC60 ..> UC65 : <<include>>
+UC62 ..> UC65 : <<include>>
+UC64 --> LLM : opcional
+@enduml

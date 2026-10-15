@@ -1,0 +1,305 @@
+@import "tailwindcss";
+/* Utilitários animate-in/animate-out e accordion-down/up (compatível com shadcn/ui) */
+@import "tw-animate-css";
+
+/* Mapeamento do tema (cores, fontes, raios, sombras, animações) */
+@config "../tailwind.config.ts";
+
+/*
+ * Design tokens
+ * -------------
+ * Paleta Agrovia, em hex. Todos os pares texto/fundo foram conferidos para WCAG AA
+ * (>= 4.5:1) nos dois temas, inclusive os badges de status.
+ *
+ * Papéis das cores: veja DESIGN.md.
+ * O anel de foco (--ring) acompanha a marca automaticamente.
+ */
+:root {
+  color-scheme: light;
+
+  --radius: 0.5rem;
+  --header-height: 5rem;
+
+  /* Superfícies */
+  --background: #EBEBEB;
+  --foreground: #2B2B2B;
+  --card: #FFFFFF;
+  --card-foreground: #2B2B2B;
+  --popover: #FFFFFF;
+  --popover-foreground: #2B2B2B;
+
+  /* Ações e superfícies secundárias */
+  --primary: #308319;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F5F5F5;
+  --secondary-foreground: #2B2B2B;
+  --muted: #F5F5F5;
+  --muted-foreground: #5E5E5E;
+  --accent: #E0EBF4;
+  --accent-foreground: #005BA0;
+
+  /* Marca: única cor de destaque (links, foco, indicadores, gráfico em ênfase) */
+  --brand: #005BA0;
+  --brand-foreground: #FFFFFF;
+  --highlight: #F8C301;
+  --highlight-foreground: #2B2B2B;
+
+  /* Status: sempre acompanhados de ícone + texto, nunca só a cor */
+  --destructive: #BE140B;
+  --destructive-foreground: #FFFFFF;
+  --success: #0A6A28;
+  --success-foreground: #FFFFFF;
+  --warning: #1F66AE;
+  --warning-foreground: #FFFFFF;
+
+  /* Painel: excesso e falta de chapas (par azul-verde e laranja, distinguivel por daltonicos) */
+  --excess: #0B7A7E;
+  --lack: #C2480A;
+
+  /* Bordas e foco */
+  --border: #D1D9E6;
+  --input: #C4CDDA;
+  --ring: var(--brand);
+
+  /*
+   * Gráficos: paleta categórica validada para daltonismo. Use na ordem 1 -> 5.
+   * No tema claro, chart-3/4/5 ficam abaixo de 3:1 sobre o card: mostre
+   * rótulos visíveis ou uma tabela junto do gráfico quando usá-las.
+   */
+  --chart-1: #005BA0;
+  --chart-2: #4CB033;
+  --chart-3: #F8C301;
+  --chart-4: #88B6E6;
+  --chart-5: #8F8F8F;
+
+  /* Sidebar (compatível com o componente Sidebar do shadcn/ui) */
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+
+  /* Sombras em camadas, difusas e tingidas com o tom do fundo */
+  --shadow-xs: 0 1px 2px 0 oklch(0.21 0.006 264 / 0.05);
+  --shadow-card:
+    0 1px 1px 0 oklch(0.21 0.006 264 / 0.02),
+    0 2px 4px -1px oklch(0.21 0.006 264 / 0.04);
+  --shadow-elevated:
+    0 2px 2px 0 oklch(0.21 0.006 264 / 0.03),
+    0 8px 16px -4px oklch(0.21 0.006 264 / 0.07);
+  --shadow-overlay:
+    0 1px 1px 0 oklch(0.21 0.006 264 / 0.02),
+    0 8px 16px -4px oklch(0.21 0.006 264 / 0.06),
+    0 24px 32px -8px oklch(0.21 0.006 264 / 0.1);
+}
+
+.dark {
+  color-scheme: dark;
+
+  --background: #091018;
+  --foreground: #F1F4F7;
+  --card: #0F1822;
+  --card-foreground: #F1F4F7;
+  --popover: #121D28;
+  --popover-foreground: #F1F4F7;
+
+  --primary: #4CB033;
+  --primary-foreground: #091018;
+  --secondary: #19242F;
+  --secondary-foreground: #F1F4F7;
+  --muted: #19242F;
+  --muted-foreground: #A2ACB7;
+  --accent: #1C2F44;
+  --accent-foreground: #70B0F1;
+
+  --brand: #70B0F1;
+  --brand-foreground: #091018;
+  --highlight: #F8C301;
+  --highlight-foreground: #091018;
+
+  --destructive: #F36352;
+  --destructive-foreground: #FFFFFF;
+  --success: #73BE43;
+  --success-foreground: #091018;
+  --warning: #8CBDF0;
+  --warning-foreground: #091018;
+  --excess: #4FD1D5;
+  --lack: #FF9F5A;
+
+  --border: oklch(1 0 0 / 9%);
+  --input: oklch(1 0 0 / 15%);
+
+  --chart-1: #70B0F1;
+  --chart-2: #4CB033;
+  --chart-3: #F8C301;
+  --chart-4: #2D78BD;
+  --chart-5: #8F8F8F;
+
+  /* No escuro, profundidade vem da borda + um brilho sutil na aresta superior */
+  --shadow-xs: 0 1px 2px 0 oklch(0 0 0 / 0.3);
+  --shadow-card:
+    inset 0 1px 0 0 oklch(1 0 0 / 0.03),
+    0 1px 2px 0 oklch(0 0 0 / 0.3);
+  --shadow-elevated:
+    inset 0 1px 0 0 oklch(1 0 0 / 0.04),
+    0 8px 24px -6px oklch(0 0 0 / 0.5);
+  --shadow-overlay:
+    inset 0 1px 0 0 oklch(1 0 0 / 0.05),
+    0 16px 40px -8px oklch(0 0 0 / 0.6);
+}
+
+/* No papel, sempre o tema claro: tinta escura sobre fundo branco */
+@media print {
+  :root {
+    --background: #FFFFFF;
+  }
+
+  .dark {
+    color-scheme: light;
+    --background: #FFFFFF;
+    --foreground: #2B2B2B;
+    --card: #FFFFFF;
+    --card-foreground: #2B2B2B;
+    --popover: #FFFFFF;
+    --popover-foreground: #2B2B2B;
+    --primary: #308319;
+    --primary-foreground: #FFFFFF;
+    --secondary: #F5F5F5;
+    --secondary-foreground: #2B2B2B;
+    --muted: #F5F5F5;
+    --muted-foreground: #5E5E5E;
+    --accent: #E0EBF4;
+    --accent-foreground: #005BA0;
+    --brand: #005BA0;
+    --brand-foreground: #FFFFFF;
+    --destructive: #BE140B;
+    --destructive-foreground: #FFFFFF;
+    --success: #0A6A28;
+    --success-foreground: #FFFFFF;
+    --warning: #1F66AE;
+    --warning-foreground: #FFFFFF;
+    --excess: #0B7A7E;
+    --lack: #C2480A;
+    --border: #D1D9E6;
+    --input: #C4CDDA;
+    --chart-1: #005BA0;
+    --chart-2: #4CB033;
+    --chart-3: #F8C301;
+    --chart-4: #88B6E6;
+    --chart-5: #8F8F8F;
+    --highlight: #F8C301;
+    --highlight-foreground: #2B2B2B;
+  }
+}
+
+/* Placeholder de carregamento: <div className="skeleton h-4 w-32 rounded" /> */
+@utility skeleton {
+  background-image: linear-gradient(
+    90deg,
+    var(--muted) 25%,
+    color-mix(in oklab, var(--muted), var(--foreground) 7%) 50%,
+    var(--muted) 75%
+  );
+  background-size: 200% 100%;
+  @apply animate-shimmer;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: color-mix(in oklab, var(--brand) 22%, transparent);
+  }
+
+  /* Foco padrão para qualquer elemento interativo sem estilo próprio */
+  :where(a, button, summary, [tabindex], input, select, textarea):focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  kbd {
+    @apply inline-flex h-5 min-w-5 items-center justify-center rounded border bg-muted px-1.5 font-mono text-[11px] font-medium text-muted-foreground;
+  }
+
+  /* Âncoras não ficam escondidas atrás do cabeçalho fixo */
+  [id] {
+    scroll-margin-top: calc(var(--header-height) + 1.5rem);
+  }
+
+  @media (width < 48rem) {
+    [id] {
+      /* + faixa de navegação da Sidebar no mobile */
+      scroll-margin-top: calc(var(--header-height) + 4.5rem);
+    }
+  }
+
+  /* A barra de rolagem não empurra o menu quando uma tela rola e outra não */
+  html {
+    scrollbar-gutter: stable;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Entrada dos cards ao abrir a tela e ao rolar (ScrollReveal). Só opacity e transform. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-rv="out"] {
+    opacity: 0;
+    transform: translateY(22px) scale(0.985);
+  }
+  @media print {
+    [data-rv="out"] {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  [data-rv="in"] {
+    animation: rv-in 380ms cubic-bezier(0.16, 1, 0.3, 1) var(--rv-delay, 0ms) backwards;
+  }
+  @keyframes rv-in {
+    from {
+      opacity: 0;
+      transform: translateY(22px) scale(0.985);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

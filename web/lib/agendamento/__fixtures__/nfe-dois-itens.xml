@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+  <NFe>
+    <infNFe Id="NFe35260999999999000191550010000090041000090047" versao="4.00">
+      <ide><cUF>35</cUF><serie>1</serie><nNF>9004</nNF><dhEmi>2026-10-02T09:15:00-03:00</dhEmi></ide>
+      <emit><CNPJ>99999999000191</CNPJ><xNome>FORNECEDOR DE TESTE LTDA</xNome></emit>
+      <det nItem="1"><prod><cProd>SEM-02</cProd><xProd>SEMENTE DE MILHO</xProd><uCom>SC</uCom><qCom>200.0000</qCom><vUnCom>310.0000</vUnCom></prod></det>
+      <det nItem="2"><prod><cProd>SEM-03</cProd><xProd>SEMENTE DE SOJA</xProd><uCom>SC</uCom><qCom>100.0000</qCom><vUnCom>280.5000</vUnCom></prod></det>
+      <total><ICMSTot><vNF>90050.00</vNF></ICMSTot></total>
+      <transp>
+        <transporta><xNome>TRANSPORTADORA TESTE</xNome></transporta>
+        <veicTransp><placa>QWE2R34</placa></veicTransp>
+        <vol><qVol>10</qVol><esp>Pallet</esp><pesoL>6000.000</pesoL></vol>
+        <vol><qVol>5</qVol><esp>Pallet</esp><pesoL>2500.500</pesoL></vol>
+      </transp>
+    </infNFe>
+  </NFe>
+</nfeProc>

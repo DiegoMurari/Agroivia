@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "incremental": false
+  },
+  "include": [
+    "types/next-shim.d.ts", "lib/*.ts", "lib/db/**/*.ts", "components/*.tsx", "components/ui/**/*.tsx", "components/layout/**/*.tsx",
+    "app/*.tsx", "app/design/**/*.tsx", "app/_showcase/**/*.ts", "app/_showcase/**/*.tsx", "scripts/**/*.ts", "e2e/**/*.ts", "*.config.ts", "vitest.setup.ts"
+  ],
+  "exclude": ["node_modules", "data"]
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "incremental": false
+  },
+  "include": [
+    "types/next-shim.d.ts", "lib/*.ts", "lib/db/**/*.ts", "components/*.tsx", "components/ui/**/*.tsx", "components/layout/**/*.tsx",
+    "app/agendamento/**/*.ts", "app/agendamento/**/*.tsx", "app/api/agendamento/**/*.ts", "lib/agendamento/**/*.ts", "components/agendamento/**/*.ts", "components/agendamento/**/*.tsx", "app/fornecedor/**/*.ts", "app/fornecedor/**/*.tsx", "app/api/fornecedor/**/*.ts", "lib/fornecedor/**/*.ts", "components/fornecedor/**/*.ts", "components/fornecedor/**/*.tsx"
+  ],
+  "exclude": ["node_modules", "data"]
+}

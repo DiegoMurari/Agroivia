@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "incremental": false
+  },
+  "include": [
+    "types/next-shim.d.ts", "lib/*.ts", "lib/db/**/*.ts", "components/*.tsx", "components/ui/**/*.tsx", "components/layout/**/*.tsx",
+    "app/painel/**/*.ts", "app/painel/**/*.tsx", "app/api/painel/**/*.ts", "lib/painel/**/*.ts", "components/painel/**/*.ts", "components/painel/**/*.tsx", "app/aprovacoes/**/*.ts", "app/aprovacoes/**/*.tsx", "app/api/aprovacoes/**/*.ts", "lib/aprovacoes/**/*.ts", "components/aprovacoes/**/*.ts", "components/aprovacoes/**/*.tsx", "app/cadastro/**/*.ts", "app/cadastro/**/*.tsx", "app/api/cadastro/**/*.ts", "lib/cadastro/**/*.ts", "components/cadastro/**/*.ts", "components/cadastro/**/*.tsx"
+  ],
+  "exclude": ["node_modules", "data"]
+}

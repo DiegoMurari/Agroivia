@@ -1,0 +1,1 @@
+ALTER TABLE `armazem` ADD `recebe_descarga` integer DEFAULT true NOT NULL;

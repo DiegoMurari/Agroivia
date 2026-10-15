@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+  <NFe>
+    <infNFe Id="NFe35260999999999000191550010000090011000090017" versao="4.00">
+      <ide><cUF>35</cUF><serie>1</serie><nNF>9001</nNF><dhEmi>2026-10-02T09:15:00-03:00</dhEmi></ide>
+      <emit><CNPJ>99999999000191</CNPJ><xNome>FORNECEDOR DE TESTE LTDA</xNome></emit>
+      <det nItem="1"><prod><cProd>ADU-01</cProd><xProd>ADUBO NPK 20-05-20 SC 50KG</xProd><uCom>SC</uCom><qCom>400.0000</qCom><vUnCom>120.5000</vUnCom><xPed>PED-9001</xPed></prod></det>
+      <total><ICMSTot><vNF>48200.00</vNF></ICMSTot></total>
+      <transp>
+        <transporta><xNome>TRANSPORTADORA TESTE</xNome></transporta>
+        <veicTransp><placa>ABC1D23</placa><UF>SP</UF></veicTransp>
+        <vol><qVol>20</qVol><esp>PALETE</esp><pesoL>20000.000</pesoL><pesoB>20400.000</pesoB></vol>
+      </transp>
+    </infNFe>
+  </NFe>
+</nfeProc>

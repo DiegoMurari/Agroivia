@@ -1,0 +1,45 @@
+# segredos
+.env
+.env.*
+!.env.example
+
+# build e dependencias genericas
+node_modules/
+dist/
+build/
+out/
+.next/
+target/
+bin/
+obj/
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.log
+
+# contexto do evento (PDFs, LEIA-ME, respostas): nao commitar nem publicar
+docs/contexto/
+
+# so locais
+.playwright-cli/
+.playwright-mcp/
+.claude/settings.local.json
+.DS_Store
+Thumbs.db
+
+# bancos, builds das janelas e saidas de teste
+data/
+*.db
+*.db-wal
+*.db-shm
+*.relogio
+.next-*/
+test-results/
+playwright-report/
+bash.exe.stackdump
+
+# pacote de dados original da Agrovia: nunca entra no git (R p. 8), esteja onde estiver
+DADOS_HACKATHON_2026/
+dados_hackathon_2026/
+DADOS_HACKATHON_2026.zip

@@ -1,0 +1,101 @@
+@startuml der-5
+!pragma layout smetana
+skinparam shadowing false
+skinparam dpi 120
+skinparam linetype ortho
+hide circle
+skinparam entityBackgroundColor #FFFFFF
+skinparam entityBorderColor #005BA0
+title DER 5: acesso, aprovações e notificações
+
+entity usuario {
+  * id : int <<PK>>
+  --
+  nome : text
+  papel : text (legado, sem CHECK)
+  perfil : adm_master | compras | fornecedor | portaria | armazem
+  email : text <<UK>>
+  senha_hash : text (scrypt)
+  ativo : bool
+  trocar_senha : bool
+  token_senha : text <<UK>>
+  token_senha_expira : text
+  armazem_id : int <<FK>>
+  fornecedor_id : int <<FK>>
+  criado_em : text
+}
+entity convite_fornecedor {
+  * id : int <<PK>>
+  --
+  token : text <<UK>>
+  email : text
+  criado_por : int <<FK usuario>>
+  criado_em : text
+  usado_em : text
+}
+entity fornecedor_cadastro {
+  * id : int <<PK>>
+  --
+  usuario_id : int <<FK, UK>>
+  fornecedor_id : int <<FK>>
+  razao_social, nome_fantasia : text
+  cnpj : text <<UK>>
+  inscricao_estadual, telefone, endereco, responsavel : text
+  tipos_mercadoria : json
+  status : pendente | aprovado | recusado
+  alteracao_pendente : json
+  motivo_recusa : text
+  decidido_por : int <<FK usuario>>
+  decidido_em : text
+}
+entity notificacao {
+  * id : int <<PK>>
+  --
+  usuario_id : int <<FK>>
+  tipo : text
+  mensagem : text
+  link : text
+  lida : bool
+  criado_em : text
+}
+entity log_aprovacao {
+  * id : int <<PK>>
+  --
+  alvo : cadastro | pedido
+  alvo_id : int
+  decisao : aprovado | recusado
+  comentario : text
+  usuario_id : int <<FK>>
+  criado_em : text
+}
+entity agendamento {
+  * id : int <<PK>>
+  --
+  aprovacao : rascunho | aguardando | aprovado | recusado
+  aprovacao_por : int <<FK usuario>>
+  aprovacao_em : text
+  agendado_na_hora : bool
+  (demais colunas: DER 2)
+}
+entity fornecedor {
+  * id : int <<PK>>
+  --
+  (DER 1)
+}
+entity armazem {
+  * id : int <<PK>>
+  --
+  (DER 1)
+}
+
+usuario |o--o{ convite_fornecedor : envia
+usuario ||--o| fornecedor_cadastro : "é o acesso de"
+fornecedor_cadastro }o--o| fornecedor : "casa pelo CNPJ"
+usuario ||--o{ notificacao : recebe
+usuario ||--o{ log_aprovacao : decide
+usuario }o--o| fornecedor : "acesso do"
+usuario }o--o| armazem : "responsável por"
+agendamento }o--o| usuario : "aprovado por"
+log_aprovacao }o..o| fornecedor_cadastro : "alvo = cadastro"
+log_aprovacao }o..o| agendamento : "alvo = pedido"
+@enduml

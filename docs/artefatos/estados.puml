@@ -1,0 +1,28 @@
+@startuml estados-agendamento
+!pragma layout smetana
+skinparam shadowing false
+skinparam dpi 120
+skinparam stateBackgroundColor #FFFFFF
+skinparam stateBorderColor #005BA0
+skinparam ArrowColor #333333
+title Ciclo de vida do agendamento de descarga
+
+[*] --> Rascunho : fornecedor monta o pedido
+Rascunho --> Aguardando : envia pelo portal\n(reserva a vaga)
+[*] --> Aprovado : link de Compras\nou portaria
+Aguardando --> Aprovado : Compras aprova
+Aguardando --> Recusado : Compras recusa\n(com comentário, libera a vaga)
+Aprovado --> Agendado
+Agendado --> Agendado : remarcar / avisar atraso
+Agendado --> Cancelado : fornecedor ou armazém cancela\n(vaga liberada)
+Agendado --> Chegou : portaria confere a NF\ne registra a chegada
+Agendado --> NaoRecebido : sem condição de receber
+Chegou --> EmDescarga : inicia descarga\n(entrada no armazém)
+Chegou --> NaoRecebido : divergência grave /\nsem vaga
+EmDescarga --> Concluido : última saída\n(caminhão liberado)
+EmDescarga --> Chegou : desfazer
+Concluido --> [*]
+Cancelado --> [*]
+Recusado --> [*]
+NaoRecebido --> [*]
+@enduml

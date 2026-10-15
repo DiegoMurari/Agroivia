@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1704" height="340" viewBox="0 0 1704 340" role="img" font-family="Arial, sans-serif">
+<title>Excesso e falta médios por mês (histórico)</title><desc>Chapas por dia comparado. Excesso é teto e falta é piso. Mês sem dado ou parcial fica sem barra.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="12" y="20" font-size="14" font-weight="700" fill="#2B2B2B">Excesso e falta médios por mês (histórico)</text>
+<text x="12" y="38" font-size="10" fill="#2B2B2B">Chapas por dia comparado. Excesso é teto e falta é piso. Mês sem dado ou parcial fica sem barra.</text>
+<rect x="12" y="46" width="10" height="10" rx="2" fill="#005BA0"/><text x="28" y="55" font-size="10" fill="#2B2B2B">Excesso</text>
+<rect x="122" y="46" width="10" height="10" rx="2" fill="#4CB033"/><text x="138" y="55" font-size="10" fill="#2B2B2B">Falta</text>
+<line x1="12" x2="1692" y1="284" y2="284" stroke="#D1D9E6"/>
+<text x="36.5" y="280" font-size="9" text-anchor="middle" fill="#2B2B2B">sem dado</text>
+<text x="71.5" y="280" font-size="9" text-anchor="middle" fill="#2B2B2B">sem dado</text>
+<text x="54" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2025-01</text>
+<rect x="103" y="171.8787809175844" width="33" height="112.12121908241559" rx="2" fill="#005BA0"/>
+<text x="119.5" y="167.8787809175844" font-size="10" text-anchor="middle" fill="#2B2B2B">4,66</text>
+<rect x="138" y="247.84396709486842" width="33" height="36.15603290513159" rx="2" fill="#4CB033"/>
+<text x="154.5" y="243.84396709486842" font-size="10" text-anchor="middle" fill="#2B2B2B">1,50</text>
+<text x="138" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2025-02</text>
+<rect x="187" y="164.94131640041866" width="33" height="119.05868359958134" rx="2" fill="#005BA0"/>
+<text x="203.5" y="160.94131640041866" font-size="10" text-anchor="middle" fill="#2B2B2B">4,94</text>
+<rect x="222" y="162.88160773143244" width="33" height="121.11839226856756" rx="2" fill="#4CB033"/>
+<text x="238.5" y="158.88160773143244" font-size="10" text-anchor="middle" fill="#2B2B2B">5,03</text>
+<text x="222" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2025-03</text>
+<rect x="271" y="189.20000123378642" width="33" height="94.79999876621358" rx="2" fill="#005BA0"/>
+<text x="287.5" y="185.20000123378642" font-size="10" text-anchor="middle" fill="#2B2B2B">3,94</text>
+<rect x="306" y="267.981043084716" width="33" height="16.01895691528395" rx="2" fill="#4CB033"/>
+<text x="322.5" y="263.981043084716" font-size="10" text-anchor="middle" fill="#2B2B2B">0,67</text>
+<text x="306" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2025-04</text>
+<rect x="355" y="181.70829804219306" width="33" height="102.29170195780692" rx="2" fill="#005BA0"/>
+<text x="371.5" y="177.70829804219306" font-size="10" text-anchor="middle" fill="#2B2B2B">4,25</text>
+<rect x="390" y="253.4260338475764" width="33" height="30.5739661524236" rx="2" fill="#4CB033"/>
+<text x="406.5" y="249.4260338475764" font-size="10" text-anchor="middle" fill="#2B2B2B">1,27</text>
+<text x="390" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2025-05</text>
+<rect x="439" y="208.28826307891393" width="33" height="75.71173692108607" rx="2" fill="#005BA0"/>
+<text x="455.5" y="204.28826307891393" font-size="10" text-anchor="middle" fill="#2B2B2B">3,14</text>
+<rect x="474" y="239.94187102397302" width="33" height="44.058128976026964" rx="2" fill="#4CB033"/>
+<text x="490.5" y="235.94187102397302" font-size="10" text-anchor="middle" fill="#2B2B2B">1,83</text>
+<text x="474" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2025-06</text>
+<rect x="523" y="237.94216817120974" width="33" height="46.05783182879027" rx="2" fill="#005BA0"/>
+<text x="539.5" y="233.94216817120974" font-size="10" text-anchor="middle" fill="#2B2B2B">1,91</text>
+<rect x="558" y="140.3900966920226" width="33" height="143.6099033079774" rx="2" fill="#4CB033"/>
+<text x="574.5" y="136.3900966920226" font-size="10" text-anchor="middle" fill="#2B2B2B">5,96</text>
+<text x="558" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2025-07</text>
+<text x="624.5" y="280" font-size="9" text-anchor="middle" fill="#2B2B2B">sem dado</text>
+<text x="659.5" y="280" font-size="9" text-anchor="middle" fill="#2B2B2B">sem dado</text>
+<text x="642" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2025-08</text>
+<rect x="691" y="242.12249295674584" width="33" height="41.877507043254155" rx="2" fill="#005BA0"/>
+<text x="707.5" y="238.12249295674584" font-size="10" text-anchor="middle" fill="#2B2B2B">1,74</text>
+<rect x="726" y="70.1267334326655" width="33" height="213.8732665673345" rx="2" fill="#4CB033"/>
+<text x="742.5" y="66.1267334326655" font-size="10" text-anchor="middle" fill="#2B2B2B">8,88</text>
+<text x="726" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2025-09</text>
+<rect x="775" y="238.07962021389838" width="33" height="45.92037978610161" rx="2" fill="#005BA0"/>
+<text x="791.5" y="234.07962021389838" font-size="10" text-anchor="middle" fill="#2B2B2B">1,91</text>
+<rect x="810" y="89.34863930428298" width="33" height="194.65136069571702" rx="2" fill="#4CB033"/>
+<text x="826.5" y="85.34863930428298" font-size="10" text-anchor="middle" fill="#2B2B2B">8,08</text>
+<text x="810" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2025-10</text>
+<rect x="859" y="209.13636549725658" width="33" height="74.86363450274344" rx="2" fill="#005BA0"/>
+<text x="875.5" y="205.13636549725658" font-size="10" text-anchor="middle" fill="#2B2B2B">3,11</text>
+<rect x="894" y="196.51243266441674" width="33" height="87.48756733558325" rx="2" fill="#4CB033"/>
+<text x="910.5" y="192.51243266441674" font-size="10" text-anchor="middle" fill="#2B2B2B">3,63</text>
+<text x="894" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2025-11</text>
+<text x="960.5" y="280" font-size="9" text-anchor="middle" fill="#2B2B2B">sem dado</text>
+<text x="995.5" y="280" font-size="9" text-anchor="middle" fill="#2B2B2B">sem dado</text>
+<text x="978" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2025-12</text>
+<rect x="1027" y="209.4001979110488" width="33" height="74.59980208895121" rx="2" fill="#005BA0"/>
+<text x="1043.5" y="205.4001979110488" font-size="10" text-anchor="middle" fill="#2B2B2B">3,10</text>
+<rect x="1062" y="253.57701807188084" width="33" height="30.42298192811916" rx="2" fill="#4CB033"/>
+<text x="1078.5" y="249.57701807188084" font-size="10" text-anchor="middle" fill="#2B2B2B">1,26</text>
+<text x="1062" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2026-01</text>
+<rect x="1111" y="160.1150311248992" width="33" height="123.88496887510082" rx="2" fill="#005BA0"/>
+<text x="1127.5" y="156.1150311248992" font-size="10" text-anchor="middle" fill="#2B2B2B">5,14</text>
+<rect x="1146" y="210.88736235737127" width="33" height="73.11263764262874" rx="2" fill="#4CB033"/>
+<text x="1162.5" y="206.88736235737127" font-size="10" text-anchor="middle" fill="#2B2B2B">3,04</text>
+<text x="1146" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2026-02</text>
+<rect x="1195" y="181.9084978495074" width="33" height="102.09150215049259" rx="2" fill="#005BA0"/>
+<text x="1211.5" y="177.9084978495074" font-size="10" text-anchor="middle" fill="#2B2B2B">4,24</text>
+<rect x="1230" y="253.1586173937416" width="33" height="30.8413826062584" rx="2" fill="#4CB033"/>
+<text x="1246.5" y="249.1586173937416" font-size="10" text-anchor="middle" fill="#2B2B2B">1,28</text>
+<text x="1230" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2026-03</text>
+<rect x="1279" y="164.24585309487145" width="33" height="119.75414690512856" rx="2" fill="#005BA0"/>
+<text x="1295.5" y="160.24585309487145" font-size="10" text-anchor="middle" fill="#2B2B2B">4,97</text>
+<rect x="1314" y="265.1610226137069" width="33" height="18.838977386293084" rx="2" fill="#4CB033"/>
+<text x="1330.5" y="261.1610226137069" font-size="10" text-anchor="middle" fill="#2B2B2B">0,78</text>
+<text x="1314" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2026-04</text>
+<rect x="1363" y="181.5892908962378" width="33" height="102.4107091037622" rx="2" fill="#005BA0"/>
+<text x="1379.5" y="177.5892908962378" font-size="10" text-anchor="middle" fill="#2B2B2B">4,25</text>
+<rect x="1398" y="64" width="33" height="220" rx="2" fill="#4CB033"/>
+<text x="1414.5" y="60" font-size="10" text-anchor="middle" fill="#2B2B2B">9,14</text>
+<text x="1398" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2026-05</text>
+<rect x="1447" y="185.3537611004579" width="33" height="98.64623889954211" rx="2" fill="#005BA0"/>
+<text x="1463.5" y="181.3537611004579" font-size="10" text-anchor="middle" fill="#2B2B2B">4,10</text>
+<rect x="1482" y="213.41388572467412" width="33" height="70.58611427532587" rx="2" fill="#4CB033"/>
+<text x="1498.5" y="209.41388572467412" font-size="10" text-anchor="middle" fill="#2B2B2B">2,93</text>
+<text x="1482" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2026-06</text>
+<rect x="1531" y="209.7063003321185" width="33" height="74.2936996678815" rx="2" fill="#005BA0"/>
+<text x="1547.5" y="205.7063003321185" font-size="10" text-anchor="middle" fill="#2B2B2B">3,09</text>
+<rect x="1566" y="225.35707149199297" width="33" height="58.64292850800704" rx="2" fill="#4CB033"/>
+<text x="1582.5" y="221.35707149199297" font-size="10" text-anchor="middle" fill="#2B2B2B">2,44</text>
+<text x="1566" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2026-07</text>
+<rect x="1615" y="217.6545696453146" width="33" height="66.34543035468539" rx="2" fill="#005BA0"/>
+<text x="1631.5" y="213.6545696453146" font-size="10" text-anchor="middle" fill="#2B2B2B">2,76</text>
+<rect x="1650" y="218.7091694035648" width="33" height="65.2908305964352" rx="2" fill="#4CB033"/>
+<text x="1666.5" y="214.7091694035648" font-size="10" text-anchor="middle" fill="#2B2B2B">2,71</text>
+<text x="1650" y="302" font-size="10" text-anchor="middle" fill="#2B2B2B">2026-08</text>
+</svg>
